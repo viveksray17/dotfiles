@@ -14,7 +14,7 @@ alias ls='ls --color=auto'
 alias mi='sudo make clean install'
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 
-# Aliases for 
+# Aliases for youtube-dl(for downloading audios and videos from youtube)
 alias dlaud="youtube-dl -x --audio-format mp3"
 alias dlvid='youtube-dl -f "best[height<=720]"'
 
