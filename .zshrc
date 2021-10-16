@@ -28,6 +28,13 @@ alias gc="git commit"
 alias gp="git push"
 alias gd="git diff"
 
+# ALIASES FOR CONFIG
+alias cs="config status"
+alias ca="config add"
+alias cc="config commit"
+alias cp="config push"
+alias cdf="config diff"
+
 # Basic auto/tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
