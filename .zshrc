@@ -7,6 +7,9 @@ HISTFILE=~/.zsh_history
 # PATH
 export PATH="/home/vivek/.local/bin:$PATH"
 
+# DJANGO SPECIFIC ENVIRONMENT VARIABLES WHICH CANNOT BE SHOWN
+source /data/vivek/extra/scripts/env_var.sh
+
 # Standard Aliases
 alias wd="cd /data/vivek"
 alias ll='ls -al --color=auto'
