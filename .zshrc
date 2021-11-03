@@ -4,8 +4,11 @@ HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
 
-# PATH
+# PATH FOR PYTHON AND OTHER SCRIPTS
 export PATH="/home/vivek/.local/bin:$PATH"
+
+# PATH FOR JAVA
+export PATH="/usr/lib/jvm/jdk-17/bin:$PATH"
 
 # DJANGO SPECIFIC ENVIRONMENT VARIABLES WHICH CANNOT BE SHOWN
 source /data/vivek/extra/scripts/env_var.sh
