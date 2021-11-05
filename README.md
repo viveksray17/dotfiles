@@ -29,3 +29,13 @@ git clone --bare https://github.com/viveksray17/dotfiles ~/.dotfiles.git
 ```
 git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME checkout
 ```
+
+4. Remove my origin(essential if you want to edit the config and push it to your github)
+```
+git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME remote remove origin
+```
+
+5. config to not show untracked files(essential)
+```
+git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME config --local status.showUntrackedFiles no
+```
