@@ -1,6 +1,7 @@
 " Plugins
 call plug#begin('~/.local/share/nvim/plugged')
-Plug 'itchyny/lightline.vim'
+    Plug 'itchyny/lightline.vim'
+    Plug 'scrooloose/nerdtree'
 call plug#end()
 
 " Color Scheme for lightline
@@ -28,3 +29,5 @@ set mouse=a                 " enable mouse click
 set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
 set ttyfast                 " Speed up scrolling in Vim
+
+noremap <C-t> :NERDTreeToggle<CR>
