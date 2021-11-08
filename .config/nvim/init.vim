@@ -31,3 +31,5 @@ filetype plugin on
 set ttyfast                 " Speed up scrolling in Vim
 
 noremap <C-t> :NERDTreeToggle<CR>
+noremap <F8> :!gcc % && ./a.out <CR>
+noremap <F7> :!python % <CR>
