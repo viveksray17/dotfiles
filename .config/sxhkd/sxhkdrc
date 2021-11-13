@@ -19,7 +19,7 @@ super + e
     pcmanfm /data/vivek
 super + w
     firefox-beta
-super + shift + l
+super + control + l
     slock
 super + n
     st -e nmtui
