@@ -15,42 +15,30 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 # Shortcut for Applications
-super + e
-    pcmanfm /data/vivek
-super + w
-    firefox-beta
+super + {e,w,v,shift+v}
+    {pcmanfm /data/vivek,firefox-beta,codium,pavucontrol}
 super + control + l
     slock
-super + n
-    st -e nmtui
-super + v
-    codium
-super + shift + v
-    pavucontrol
+super + alt + {w,n}
+    st -e {nmtui,nvim}
 super + shift + t
     sxiv /data/vivek/Downloads/School/Extra/IMG-20210609-WA0009.jpg -Z
 
 # Sound
-XF86AudioRaiseVolume
-    pactl set-sink-volume 0 +5%
-XF86AudioLowerVolume
-    pactl set-sink-volume 0 -5%
+{XF86AudioRaiseVolume,XF86AudioLowerVolume}
+    pactl set-sink-volume 0 {+5%,-5%}
 XF86AudioMute
     pactl set-sink-mute 0 toggle
 
 # Screenshots with scrot
 Print
     scrot -q 100 /data/vivek/Pictures/Screenshots/screenshot_%Y-%m-%d_%T.png
-super + Print
-    scrot -u -q 100 /data/vivek/Pictures/Screenshots/screenshot_%Y-%m-%d_%T.png
-shift + Print
-    scrot -s -q 100 /data/vivek/Pictures/Screenshots/screenshot_%Y-%m-%d_%T.png
+{super + Print, shift + Print}
+    scrot -q 100 {-u,-s} /data/vivek/Pictures/Screenshots/screenshot_%Y-%m-%d_%T.png
 
 # Poweroff and Reboot
-super + shift + b
-    st -e sudo reboot
-super + shift + q
-    st -e sudo poweroff
+super + shift + {b,q}
+    st -e sudo {reboot,poweroff}
 
 # BSPWM hotkeys
 # restart bspwm
