@@ -10,7 +10,6 @@ let g:lightline = {
       \ }
 
 " Default Settings
-set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching 
 set ignorecase              " case insensitive 
 set mouse=v                 " middle-click paste with 
@@ -22,13 +21,11 @@ set expandtab               " converts tabs to white space
 set shiftwidth=4            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
 set number                  " add line numbers
-set wildmode=longest,list   " get bash-like tab completions
 filetype plugin indent on   " allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
 set mouse=a                 " enable mouse click
-filetype plugin on
-set ttyfast                 " Speed up scrolling in Vim
 
-noremap <C-t> :NERDTreeToggle<CR>
-noremap <F8> :!gcc % && ./a.out <CR>
-noremap <F7> :!python % <CR>
+noremap <M-t> :NERDTreeToggle<CR>
+noremap <F8> :!gcc % && ./a.out<CR>
+noremap <F7> :!python %<CR>
+noremap <M-n> :e ~/.config/nvim/init.vim<CR>
