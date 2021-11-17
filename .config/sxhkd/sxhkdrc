@@ -50,8 +50,8 @@ super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # focus or send to the given desktop
-super + {_,shift + }{1-4}
-	bspc {desktop -f,node -d} '^{1-4}'
+super + {_,shift + }{1-5}
+	bspc {desktop -f,node -d} '^{1-5}'
 
 
 # expand a window by moving one of its side outward
