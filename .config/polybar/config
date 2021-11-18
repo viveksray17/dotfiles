@@ -35,6 +35,7 @@ wm-restack = bspwm
 type = internal/xkeyboard
 blacklist-0 = num lock
 format-prefix-underline = ${colors.secondary}
+format-prefix = "LAYOUT "
 label-layout = %layout%
 label-layout-underline = ${colors.secondary}
 label-indicator-background = ${colors.secondary}
