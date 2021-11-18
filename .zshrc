@@ -35,7 +35,7 @@ alias gd="git diff"
 alias cs="config status"
 alias ca="config add"
 alias cc="config commit"
-alias cps="config push"
+alias cps="config push origin main"
 alias cdf="config diff"
 
 # Basic auto/tab complete:
