@@ -24,9 +24,9 @@ XF86AudioMute
 
 # Screenshots with scrot
 Print
-    scrot -q 100 /data/vivek/Pictures/Screenshots/screenshot_%Y-%m-%d_%T.png
+    scrot -q 100 -p /data/vivek/Pictures/Screenshots/screenshot_%Y-%m-%d_%T.png
 {super + Print, shift + Print}
-    scrot -q 100 {-u,-s} /data/vivek/Pictures/Screenshots/screenshot_%Y-%m-%d_%T.png
+    scrot -q 100 {-u,-s} -p /data/vivek/Pictures/Screenshots/screenshot_%Y-%m-%d_%T.png
 
 # Poweroff and Reboot
 super + shift + {b,q}
