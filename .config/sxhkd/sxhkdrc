@@ -10,7 +10,7 @@ super + Escape
 
 # Shortcut for Applications
 super + {e,w,v,shift+v,super+control+l}
-    {pcmanfm /data/vivek,firefox-beta,codium,pavucontrol,slock}
+    {pcmanfm /data/vivek,firefox,codium,pavucontrol,slock}
 super + alt + {w,n}
     st -e {nmtui,nvim}
 super + shift + t
@@ -24,6 +24,10 @@ XF86AudioMute
 shift+XF86AudioMute
     pactl set-sink-volume 0 50%;polybar-msg hook volume 1
 
+# update sound module
+super+F2
+    polybar-msg hook volume 1
+
 # Screenshots with scrot
 Print
     scrot -q 100 -p /data/vivek/Pictures/Screenshots/screenshot_%Y-%m-%d_%T.png
@@ -32,7 +36,7 @@ Print
 
 # Poweroff and Reboot
 super + shift + {b,q}
-    st -e sudo {reboot,poweroff}
+    {reboot,poweroff}
 
 # BSPWM hotkeys
 # restart bspwm
