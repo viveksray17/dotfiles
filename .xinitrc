@@ -5,5 +5,5 @@ xrdb -merge $HOME/.Xresources
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 picom &
 pgrep -x sxhkd > /dev/null || sxhkd &
-$HOME/.fehbg &
+nitrogen --restore &
 exec bspwm
