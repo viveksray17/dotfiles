@@ -24,10 +24,6 @@ XF86AudioMute
 shift+XF86AudioMute
     pactl set-sink-volume 0 50%;polybar-msg hook volume 1
 
-# update sound module
-super+F2
-    polybar-msg hook volume 1
-
 # Screenshots with scrot
 Print
     scrot -q 100 -p /data/vivek/Pictures/Screenshots/screenshot_%Y-%m-%d_%T.png
