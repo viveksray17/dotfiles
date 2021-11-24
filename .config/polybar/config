@@ -82,12 +82,11 @@ initial = 1
 
 [module/ssid]
 type = custom/ipc
-hook-0 = iwgetid -r
+hook-0 = ~/.config/polybar/scripts/get-ssid
 format-prefix = "📶(SSID) "
 click-left = st -e nmtui
 click-right = polybar-msg hook ssid 1
 format-underline = ${colors.secondary}
-
 format-padding = 1
 initial = 1
 
