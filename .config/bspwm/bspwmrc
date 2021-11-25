@@ -27,4 +27,5 @@ bspc config focused_border_color	    "#5e81ac"
 
 # Rules
 bspc rule -a firefox state=fullscreen
-bspc rule -a Evince state=fullscreen
+bspc rule -a Evince desktop='^5' state=fullscreen
+bspc rule -a Pcmanfm desktop='^4'
