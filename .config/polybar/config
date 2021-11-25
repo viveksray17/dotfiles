@@ -92,8 +92,9 @@ initial = 1
 
 [module/volume]
 type = custom/ipc
-hook-0 = ~/.config/polybar/scripts/get-volume
-hook-1 = echo "muted"
+hook-0 = echo "50"
+hook-1 = ~/.config/polybar/scripts/get-volume
+hook-2 = echo "muted"
 click-left = pavucontrol
 format-prefix = "VOLUME "
 format-underline = #0a6cf5

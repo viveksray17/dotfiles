@@ -18,11 +18,11 @@ super + shift + t
 
 # Sound
 {XF86AudioRaiseVolume,XF86AudioLowerVolume}
-    pactl set-sink-volume 0 {+5%,-5%};polybar-msg hook volume 1
+    pactl set-sink-volume 0 {+5%,-5%};polybar-msg hook volume 2
 XF86AudioMute
-    pactl set-sink-volume 0 0%;polybar-msg hook volume 2
+    pactl set-sink-volume 0 0%;polybar-msg hook volume 3
 shift+XF86AudioMute
-    pactl set-sink-volume 0 50%;polybar-msg hook volume 1
+    pactl set-sink-volume 0 50%;polybar-msg hook volume 2
 
 # Screenshots with scrot
 Print
