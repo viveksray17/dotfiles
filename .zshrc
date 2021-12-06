@@ -28,7 +28,7 @@ alias dlvid='youtube-dl -f "best[height<=720]"'
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
-alias gp="git push"
+alias gp="git push origin $(git config --global init.defaultbranch)"
 alias gd="git diff"
 
 # ALIASES FOR CONFIG
