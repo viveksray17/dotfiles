@@ -6,7 +6,7 @@ super + p
 	dmenu_run -p "Run:"
 # make sxhkd reload its configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd
+	pkill -USR1 -x sxhkd && notify-send "SXHKD" "Program Reloaded"
 
 # Shortcut for Applications
 super + {e,w,v,shift+v,super+control+l}
@@ -18,17 +18,19 @@ super + shift + t
 
 # Sound
 {XF86AudioRaiseVolume,XF86AudioLowerVolume}
-    pactl set-sink-volume 0 {+5%,-5%};polybar-msg hook volume 2
+    pactl set-sink-volume 0 {+5%,-5%};polybar-msg hook volume 2;notify-send "Pipewire" "Volume Set to $($HOME/.config/polybar/scripts/get-volume)"
 XF86AudioMute
-    pactl set-sink-volume 0 0%;polybar-msg hook volume 3
+    pactl set-sink-volume 0 0%;polybar-msg hook volume 3;notify-send "Pipewire" "Volume Muted"
 shift+XF86AudioMute
-    pactl set-sink-volume 0 50%;polybar-msg hook volume 2
+    pactl set-sink-volume 0 50%;polybar-msg hook volume 2;notify-send "Pipewire" "Volume Set to $($HOME/.config/polybar/scripts/get-volume)"
 
 # Screenshots with scrot
 Print
-    scrot -q 100 -p /data/vivek/Pictures/Screenshots/screenshot_%Y-%m-%d_%T.png
-{super + Print, shift + Print}
-    scrot -q 100 {-u,-s} -p /data/vivek/Pictures/Screenshots/screenshot_%Y-%m-%d_%T.png
+    scrot -q 100 -p /data/vivek/Pictures/Screenshots/screenshot_%Y-%m-%d_%T.png;notify-send "Scrot" "Full-Screen Captured"
+super + Print
+    scrot -q 100 -u -p /data/vivek/Pictures/Screenshots/screenshot_%Y-%m-%d_%T.png;notify-send "Scrot" "Window Captured"
+shift + Print
+    scrot -q 100 -s -p /data/vivek/Pictures/Screenshots/screenshot_%Y-%m-%d_%T.png;notify-send "Scrot" "Area Captured"
 
 # Poweroff and Reboot
 super + shift + {b,q}
