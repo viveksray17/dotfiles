@@ -1,0 +1,7 @@
+[Default Applications]
+application/pdf=org.gnome.Evince.desktop
+inode/directory=pcmanfm.desktop
+
+[Added Associations]
+application/pdf=org.gnome.Evince.desktop;
+application/x-desktop=nvim.desktop;
