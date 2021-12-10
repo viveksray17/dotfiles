@@ -1,7 +1,9 @@
 [Default Applications]
 application/pdf=org.gnome.Evince.desktop
 inode/directory=pcmanfm.desktop
+video/mp4=mpv.desktop
 
 [Added Associations]
 application/pdf=org.gnome.Evince.desktop;
 application/x-desktop=nvim.desktop;
+video/mp4=mpv.desktop;

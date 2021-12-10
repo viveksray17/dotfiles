@@ -1,5 +1,0 @@
-if [[ $(iwgetid -r) ]]; then
-    echo "$(iwgetid -r)"
-else
-    echo "not connected"
-fi
