@@ -2,7 +2,6 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-alias wd='cd /data/vivek'
 alias ll='ls -al --color=auto'
 alias mi='sudo make clean install'
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
@@ -11,7 +10,7 @@ alias config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
-alias gp="git push origin $(git config --global init.defaultbranch)"
+alias gp="git push origin main"
 alias gd="git diff"
 
 # ALIASES FOR CONFIG
@@ -23,8 +22,6 @@ alias cdf="config diff"
 
 # ENVIRONMENT VARIABLES
 export PATH="/home/vivek/.local/bin:$PATH"
-export PATH="/usr/lib/jvm/jdk-17/bin:$PATH"
-source /data/vivek/extra/scripts/env_var.sh
 
 PS1="[\u@\h \W] "
 set -o vi

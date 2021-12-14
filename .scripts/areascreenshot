@@ -1,0 +1,2 @@
+#!/bin/sh
+scrot -q 100 -s -p /data/vivek/Pictures/Screenshots/screenshot_%Y-%m-%d_%T.png && notify-send 'Scrot' 'Area Captured' --expire-time=2000
