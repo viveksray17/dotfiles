@@ -23,5 +23,5 @@ alias cdf="config diff"
 # ENVIRONMENT VARIABLES
 export PATH="/home/vivek/.local/bin:$PATH"
 
-PS1="[\u@\h \W] "
+PS1="\[\033[01;36m\][\u@\h\[\033[01;37m\] \W\[\033[01;36m\]]\[\033[00m\] "
 set -o vi
