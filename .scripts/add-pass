@@ -3,4 +3,3 @@ read -p "Enter the name of the service: " service
 pass add $service
 cd $HOME/.password-store
 git push origin main --force
-cd
