@@ -12,6 +12,8 @@ application/x-extension-shtml=userapp-Firefox-Q8H3D1.desktop
 application/xhtml+xml=userapp-Firefox-Q8H3D1.desktop
 application/x-extension-xhtml=userapp-Firefox-Q8H3D1.desktop
 application/x-extension-xht=userapp-Firefox-Q8H3D1.desktop
+image/png=sxiv.desktop
+image/jpeg=sxiv.desktop
 
 [Added Associations]
 application/pdf=org.gnome.Evince.desktop;
@@ -27,3 +29,5 @@ application/x-extension-shtml=userapp-Firefox-7VF9D1.desktop;userapp-Firefox-Q8H
 application/xhtml+xml=userapp-Firefox-7VF9D1.desktop;userapp-Firefox-Q8H3D1.desktop;
 application/x-extension-xhtml=userapp-Firefox-7VF9D1.desktop;userapp-Firefox-Q8H3D1.desktop;
 application/x-extension-xht=userapp-Firefox-7VF9D1.desktop;userapp-Firefox-Q8H3D1.desktop;
+image/png=sxiv.desktop;
+image/jpeg=sxiv.desktop;
