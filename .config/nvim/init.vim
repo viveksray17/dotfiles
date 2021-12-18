@@ -24,6 +24,7 @@ set number                  " add line numbers
 filetype plugin indent on   " allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
 set mouse=a                 " enable mouse click
+set nowrap                  " I don't want line wrap
 
 noremap <M-t> :NERDTreeToggle<CR>
 noremap <F8> :!gcc % && ./a.out<CR>
