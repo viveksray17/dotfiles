@@ -26,5 +26,5 @@ alias ll='ls -al --color=auto'
 alias mi='sudo make clean install'
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 alias update="yay -Syyu;firefox_updater"
-PS1="[\u@\h \W] "
+PS1="[\u@\h \w] "
 set -o vi
