@@ -1,5 +1,4 @@
 #!/bin/sh
-#!/bin/sh
 while read file
 do
         case "$1" in
