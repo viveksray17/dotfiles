@@ -8,6 +8,9 @@ alias ga="git add"
 alias gc="git commit"
 alias gp="git push origin main"
 alias gd="git diff"
+alias gr="git remote -v"
+alias gch="git checkout"
+alias gl="git log"
 
 # ALIASES FOR CONFIG
 alias cs="config status"
