@@ -1,7 +1,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-
 # ALIASES FOR GIT
 alias gs="git status"
 alias ga="git add"
