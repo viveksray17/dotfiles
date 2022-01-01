@@ -22,7 +22,7 @@ alias cdf="config diff"
 alias ls='ls --color=auto'
 alias ll='ls -al --color=auto'
 alias mi='sudo make clean install'
-alias sc="cd ~/.scripts"
+alias sc="cd ~/.local/bin"
 alias dw="cd ~/suckless/dwm"
 alias sk="cd ~/suckless"
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"

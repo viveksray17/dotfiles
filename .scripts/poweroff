@@ -1,4 +1,0 @@
-#!/bin/sh
-shutdown="sudo /usr/bin/poweroff"
-chosen=$(echo "no\nyes" | dmenu -i -p "Are you sure you want to shutdown?")
-[ "$chosen" = "yes" ] && $shutdown

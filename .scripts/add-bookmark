@@ -1,3 +1,0 @@
-read -p 'enter bookmark name: ' bookmark_name
-read -p 'enter bookmark url: ' bookmark_url
-printf "$bookmark_name $bookmark_url\n" >> $HOME/.local/share/bookmarks

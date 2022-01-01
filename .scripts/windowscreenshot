@@ -1,3 +1,0 @@
-#!/bin/sh
-scrot -q 100 -u -p ~/Pictures/Screenshots/screenshot_%Y-%m-%d_%T.png && notify-send 'Scrot' 'Window Captured' --expire-time=2000
-
