@@ -1,5 +1,5 @@
 #!/bin/sh
-read -p "Enter the name of the service: " service
+read -p "Enter service name: " service
 pass add $service
 cd $HOME/.password-store
 git push origin main --force
