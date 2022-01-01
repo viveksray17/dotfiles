@@ -1,0 +1,29 @@
+# ALIASES FOR GIT
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push origin main"
+alias gd="git diff"
+alias gr="git remote -v"
+alias gch="git checkout"
+alias gl="git log"
+alias gra="git remote add origin"
+alias grv="git remote remove origin"
+alias gi="git init"
+
+# ALIASES FOR CONFIG
+alias cs="config status"
+alias ca="config add"
+alias cc="config commit"
+alias cps="config push origin main"
+alias cdf="config diff"
+
+# STANDARD ALIASES
+alias ls='ls --color=auto'
+alias ll='ls -al --color=auto'
+alias mi='sudo make clean install'
+alias sc="cd ~/.scripts"
+alias dw="cd ~/suckless/dwm"
+alias sk="cd ~/suckless"
+alias config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+alias update="yay -Syyu;firefox_updater"
