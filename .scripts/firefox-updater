@@ -1,5 +1,5 @@
 #!/bin/bash
-fetched_version=$($HOME/.scripts/get_firefox_version.py)
+fetched_version=$($HOME/.scripts/get-firefox-version)
 firefox_version=$($HOME/Applications/firefox/firefox-bin --version)
 true_version=${firefox_version:16}
 install_firefox(){
