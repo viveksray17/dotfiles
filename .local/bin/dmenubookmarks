@@ -2,4 +2,4 @@
 chosen=$(cat $HOME/.local/share/bookmarks | awk '{ print $1 }' | sort | dmenu -i -p "choose bookmarks:")
 [ -z "$chosen" ] && exit
 url=$(cat $HOME/.local/share/bookmarks | grep -w "$chosen" | awk '{ print $2 }')
-firefox $url
+$BROWSER $url
