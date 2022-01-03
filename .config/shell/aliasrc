@@ -1,3 +1,4 @@
+#!/bin/sh
 # ALIASES FOR GIT
 alias gs="git status"
 alias ga="git add"
@@ -26,4 +27,4 @@ alias sc="cd ~/.local/bin"
 alias dw="cd ~/suckless/dwm"
 alias sk="cd ~/suckless"
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
-alias update="yay -Syyu;firefox_updater"
+alias update="yay -Syyu;firefox-updater"
