@@ -1,6 +1,6 @@
 #!/bin/bash
-fetched_version=$($HOME/.scripts/get-firefox-version)
-firefox_version=$($HOME/Applications/firefox/firefox-bin --version)
+fetched_version=$(get-firefox-version)
+firefox_version=$(firefox --version)
 true_version=${firefox_version:16}
 install_firefox(){
     read -p 'Update Available! Do you want to install it?(Y/n) ' install_or_not
