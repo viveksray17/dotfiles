@@ -10,6 +10,7 @@ let g:lightline = {
       \ }
 
 " Default Settings
+set title
 set showmatch               " show matching 
 set ignorecase              " case insensitive 
 set mouse=v                 " middle-click paste with 
@@ -23,6 +24,7 @@ set autoindent              " indent a new line the same amount as the line just
 set number                  " add line numbers
 filetype plugin indent on   " allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
+set clipboard+=unnamedplus
 set mouse=a                 " enable mouse click
 set nowrap                  " I don't want line wrap
 
