@@ -4,5 +4,5 @@ read -p 'enter bookmark url: ' bookmark_url
 printf "$bookmark_name $bookmark_url\n" >> $HOME/.local/share/bookmarks/bookmarks.txt
 cd ~/.local/share/bookmarks
 git add -A
-git commit -m --no-gpg-sign "Added bookmark $bookmark_name"
+git commit -m "Added bookmark $bookmark_name"
 git push origin main
