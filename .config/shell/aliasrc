@@ -26,5 +26,8 @@ alias mi='sudo make clean install'
 alias sc="cd ~/.local/bin"
 alias dw="cd ~/suckless/dwm"
 alias sk="cd ~/suckless"
+alias mv="mv -i" 
+alias cp="cp -i" 
+alias rm="rm -i" 
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 alias update="yay -Syyu;firefox-updater"
