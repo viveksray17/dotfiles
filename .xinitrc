@@ -4,6 +4,7 @@ xmodmap -e 'clear lock'
 xrdb -merge $HOME/.Xresources
 picom &
 ~/.fehbg &
+eval $(ssh-agent)
 while true; do
     dwm >/dev/null 2>&1
 done
