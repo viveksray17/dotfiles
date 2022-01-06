@@ -28,7 +28,7 @@ set clipboard+=unnamedplus
 set mouse=a                 " enable mouse click
 set nowrap                  " I don't want line wrap
 
-noremap <M-t> :NERDTreeToggle<CR>
+noremap <M-n> :NERDTreeToggle<CR>
 noremap <F8> :!gcc % && ./a.out<CR>
 noremap <F7> :!python %<CR>
-noremap <M-n> :e ~/.config/nvim/init.vim<CR>
+noremap <M-t> :tabNext<CR>
