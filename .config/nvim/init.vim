@@ -32,3 +32,7 @@ noremap <M-n> :NERDTreeToggle<CR>
 noremap <F8> :!gcc % && ./a.out<CR>
 noremap <F7> :!python %<CR>
 noremap <M-t> :tabNext<CR>
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
