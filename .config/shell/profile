@@ -1,6 +1,7 @@
 #!/bin/bash
 export PATH="$HOME/.local/bin:$PATH"
 export EDITOR="nvim"
+export HISTFILE="$HOME/.cache/.bash_history"
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx
 fi
