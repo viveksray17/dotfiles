@@ -1,4 +1,4 @@
 #!/bin/sh
 restart="sudo /usr/bin/reboot"
-chosen=$(echo "no\nyes" | dmenu -i -p "Are you sure you want to reboot?")
+chosen=$(echo "no\nyes" | dmenu -i -p "reboot?")
 [ "$chosen" = "yes" ] && $restart
