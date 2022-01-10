@@ -33,4 +33,5 @@ alias \
     cp="cp -i" \
     rm="rm -i" \
     config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME" \
-    update="yay -Syyu;firefox-updater"
+    update="yay -Syyu;firefox-updater" \
+    find="find -name 2> /dev/null"
