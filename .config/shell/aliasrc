@@ -34,4 +34,19 @@ alias \
     rm="rm -i" \
     config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME" \
     update="yay -Syyu;firefox-updater" \
-    find="find -name 2> /dev/null"
+    find="find -name 2> /dev/null" \
+    py="cd ~/Documents/code/python" \
+    ac="source env/bin/activate" \
+    tmux="tmux -f $HOME/.config/tmux.conf"
+
+se(){ 
+    directory=$(du -a $HOME/.local/bin/* $HOME/.local/share/bookmarks $HOME/.config/* | awk '{ print $2 }' | grep -w -v "libreoffice" | fzf)
+    [ "$directory" ] && nvim $directory
+}
+de() { 
+    dir=$(ls -d -1 "$HOME/Documents/code/django/"* "$HOME/Documents/code/projects/"* | fzf)
+    name=$(echo $dir | awk -F "/" '{ print $NF }')
+    [ "$dir" ] && pushd $dir > /dev/null && \
+    tmux new -s "$name" && \
+    popd > /dev/null
+}
