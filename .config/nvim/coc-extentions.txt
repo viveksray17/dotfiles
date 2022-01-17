@@ -1,0 +1,8 @@
+coc-snippets
+coc-prettier
+coc-pairs
+coc-html
+coc-vimlsp
+coc-tsserver
+coc-pyright
+coc-json
