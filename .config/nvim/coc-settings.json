@@ -11,7 +11,6 @@
     "typescriptreact",
     "typescript"
   ],
-  "snippets.ultisnips.directories": ["~/.config/nvim/utils/snips"],
   "python.formatting.provider": "autopep8",
   "snippets.extends": {
     "javascriptreact": ["javascript", "html"],
