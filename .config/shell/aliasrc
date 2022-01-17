@@ -29,18 +29,14 @@ alias \
     sc="cd ~/.local/bin" \
     dw="cd ~/suckless/dwm" \
     sk="cd ~/suckless" \
-    mv="mv -i" \
-    cp="cp -i" \
-    rm="rm -i" \
     config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME" \
     update="yay -Syyu;firefox-updater" \
     find="find -name 2> /dev/null" \
-    py="cd ~/Documents/code/python" \
-    ac="source env/bin/activate" \
+    dac="source ../django-env/bin/activate" \
     tmux="tmux -f $HOME/.config/tmux.conf"
 
 se(){ 
-    directory=$(du -a $HOME/.local/bin/* $HOME/.local/share/bookmarks $HOME/.config/* | awk '{ print $2 }' | grep -w -v "libreoffice" | fzf)
+    directory=$(du -a $HOME/.local/bin/* $HOME/.config/* | awk '{ print $2 }' | grep -w -v "libreoffice\|coc" | fzf)
     [ "$directory" ] && nvim $directory
 }
 de() { 
