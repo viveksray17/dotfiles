@@ -9,11 +9,25 @@
     "json",
     "python",
     "typescriptreact",
-    "typescript"
+    "typescript",
+    "cpp",
+    "c"
   ],
   "python.formatting.provider": "autopep8",
   "snippets.extends": {
     "javascriptreact": ["javascript", "html"],
     "typescript": ["javascript", "html"]
+  },
+  "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp"],
+      "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
+    }
   }
 }
