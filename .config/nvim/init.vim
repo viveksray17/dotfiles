@@ -5,6 +5,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'vim-python/python-syntax'
     Plug 'morhetz/gruvbox'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'turbio/bracey.vim'
 call plug#end()
 
 " Settings
