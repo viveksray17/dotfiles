@@ -40,7 +40,7 @@ se(){
     [ "$file" ] && nvim $file
 }
 sf(){
-    directory=$(du -a $HOME/.local/bin/* $HOME/.config/* $HOME/.local/share/bookmarks | awk '{ print $2 }' | grep -w -v "libreoffice\|coc" | fzf)
+    directory=$(du -a $HOME/.local/bin/* $HOME/.config/* | awk '{ print $2 }' | grep -w -v "libreoffice\|coc" | fzf)
     [ "$directory" ] && cd $directory
 }
 de() { 
