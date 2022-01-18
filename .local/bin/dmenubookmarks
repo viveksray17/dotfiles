@@ -1,5 +1,5 @@
 #!/bin/sh
-chosen=$(cat $HOME/.local/share/bookmarks/bookmarks.txt | awk '{ print $1 }' | sort | dmenu -i -p "bookmarks:")
+chosen=$(ls -l $HOME/.local/share/bookmarks | awk '{ print $9 }' | tail -n +2 | dmenu -i -p "bookmarks:")
 [ -z "$chosen" ] && exit
-url=$(cat $HOME/.local/share/bookmarks/bookmarks.txt | grep "^$chosen" | awk '{ print $2 }')
+url=$(cat $HOME/.local/share/bookmarks/$chosen )
 firefox $url
