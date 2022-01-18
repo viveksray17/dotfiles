@@ -6,3 +6,4 @@ coc-vimlsp
 coc-tsserver
 coc-pyright
 coc-json
+coc-htmldjango
