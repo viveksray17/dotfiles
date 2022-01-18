@@ -36,8 +36,12 @@ alias \
     tmux="tmux -f $HOME/.config/tmux.conf"
 
 se(){ 
-    directory=$(du -a $HOME/.local/bin/* $HOME/.config/* | awk '{ print $2 }' | grep -w -v "libreoffice\|coc" | fzf)
-    [ "$directory" ] && nvim $directory
+    file=$(du -a $HOME/.local/bin/* $HOME/.config/* | awk '{ print $2 }' | grep -w -v "libreoffice\|coc" | fzf)
+    [ "$file" ] && nvim $file
+}
+sf(){
+    directory=$(du -a $HOME/.local/bin/* $HOME/.config/* $HOME/.local/share/bookmarks | awk '{ print $2 }' | grep -w -v "libreoffice\|coc" | fzf)
+    [ "$directory" ] && cd $directory
 }
 de() { 
     dir=$(ls -d -1 "$HOME/Documents/code/django/"* "$HOME/Documents/code/projects/"* | fzf)
