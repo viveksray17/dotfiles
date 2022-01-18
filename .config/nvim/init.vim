@@ -42,6 +42,8 @@ nnoremap <leader>d :bdelete<CR>
 nnoremap <S-u> <C-r>
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+nnoremap <F5> :Bracey<CR>
+nnoremap <S-F5> :BraceyStop<CR>
 
 " Source the settings of coc
 source $HOME/.config/nvim/plug-config/coc.vim
