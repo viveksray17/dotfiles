@@ -6,6 +6,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'morhetz/gruvbox'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'turbio/bracey.vim'
+    Plug 'ap/vim-buftabline'
 call plug#end()
 
 " Settings
