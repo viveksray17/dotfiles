@@ -43,6 +43,7 @@ de() {
     dir=$(ls -d -1 "$HOME/Documents/code/django/"* "$HOME/Documents/code/projects/"* | fzf)
     name=$(echo $dir | awk -F "/" '{ print $NF }')
     [ "$dir" ] && pushd $dir > /dev/null && \
-    tmux new -s "$name" && \
+    tmux new-session -d -s "$name" && \
+    tmux switch-client -t "$name" && \
     popd > /dev/null
 }
