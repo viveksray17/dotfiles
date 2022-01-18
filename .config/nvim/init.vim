@@ -34,12 +34,12 @@ highlight Normal ctermbg=NONE
 
 " Some Keyboard shortcuts
 let mapleader = " "
-map <C-x> :NERDTreeToggle<CR>
-map <leader>h :bprev<CR>
-map <leader>l :bnext<CR>
-map <S-u> <C-r>
-map <C-h> <C-w>h
-map <C-l> <C-w>l
+noremap <C-x> :NERDTreeToggle<CR>
+noremap <leader>h :bprev<CR>
+noremap <leader>l :bnext<CR>
+noremap <S-u> <C-r>
+noremap <C-h> <C-w>h
+noremap <C-l> <C-w>l
 
 " Source the settings of coc
 source $HOME/.config/nvim/plug-config/coc.vim
