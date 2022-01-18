@@ -38,6 +38,7 @@ let mapleader = " "
 nnoremap <C-x> :NERDTreeToggle<CR>
 nnoremap <leader>h :bprev<CR>
 nnoremap <leader>l :bnext<CR>
+nnoremap <leader>d :bdelete<CR>
 nnoremap <S-u> <C-r>
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
