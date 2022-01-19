@@ -12,6 +12,10 @@ call plug#end()
 
 " Settings
 let g:python_highlight_all = 1
+let g:fzf_action = { 'ctrl-v': 'vsplit' }
+let g:NERDSpaceDelims = 1
+let g:NERDTreeIgnore = ['^node_modules$', '__pycache__']
+let mapleader = " "
 set showmatch
 set ignorecase
 set hlsearch
@@ -36,16 +40,17 @@ colorscheme gruvbox
 highlight Normal ctermbg=NONE
 
 " Some Keyboard shortcuts
-let mapleader = " "
 nnoremap <C-x> :NERDTreeToggle<CR>
-nnoremap <leader>h :bprev<CR>
-nnoremap <leader>l :bnext<CR>
+nnoremap <S-h> :bprev<CR>
+nnoremap <S-l> :bnext<CR>
 nnoremap <leader>d :bdelete<CR>
+nnoremap <leader>f :FZF<CR>
 nnoremap <S-u> <C-r>
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 nnoremap <F5> :Bracey<CR>
 nnoremap <S-F5> :BraceyStop<CR>
+nnoremap <leader>r :so ~/.config/nvim/init.vim<CR>
 
 " Source the settings of coc
 source $HOME/.config/nvim/plug-config/coc.vim
