@@ -1,7 +1,8 @@
 " Plugins
 call plug#begin('~/.local/share/nvim/plugged')
     Plug 'honza/vim-snippets'
-    Plug 'scrooloose/nerdtree'
+    Plug 'preservim/nerdtree'
+    Plug 'preservim/nerdcommenter'
     Plug 'vim-python/python-syntax'
     Plug 'morhetz/gruvbox'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
