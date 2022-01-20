@@ -30,7 +30,7 @@ alias \
     dw="cd ~/suckless/dwm" \
     sk="cd ~/suckless" \
     config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME" \
-    update="yay -Syyu;firefox-updater" \
+    update="yay -Syu" \
     find="find -name 2> /dev/null" \
     dac="source ../django-env/bin/activate" \
     tmux="tmux -f $HOME/.config/tmux.conf"
