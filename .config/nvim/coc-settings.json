@@ -11,8 +11,12 @@
     "typescriptreact",
     "typescript",
     "cpp",
-    "c"
+    "c",
+    "htmldjango"
   ],
+  "htmldjango.formatting.provider": "djhtml",
+  "htmldjango.djhtml.tabWidth": 2,
+  "prettier.formatterPriority": 1,
   "python.formatting.provider": "autopep8",
   "snippets.extends": {
     "javascriptreact": ["javascript", "html"],
