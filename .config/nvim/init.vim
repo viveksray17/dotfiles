@@ -15,10 +15,11 @@ let g:python_highlight_all = 1
 let g:fzf_action = { 'ctrl-v': 'vsplit' }
 let g:NERDSpaceDelims = 1
 let NERDTreeMinimalUI=1
+let g:NERDTreeIgnore = ['^node_modules$', '__pycache__', '__init__.py']
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 let mapleader = " "
-set scrolloff=8
+set scrolloff=15
 set ignorecase
 set hlsearch
 set incsearch
@@ -44,7 +45,8 @@ highlight Normal ctermbg=NONE
 nnoremap <silent><S-h> :bprev<CR>
 nnoremap <silent><S-l> :bnext<CR>
 nnoremap <leader>d :bdelete<CR>
-nnoremap <C-p> :FZF<CR>
+nnoremap <silent><C-p> :FZF<CR>
+nnoremap <leader>f :echo &filetype<CR>
 nnoremap <leader>gs :G<CR>
 nnoremap <leader>gc :Git commit<CR>
 nnoremap <leader>gd :Git diff<CR>
@@ -59,6 +61,9 @@ nnoremap <C-k> <C-w>k
 nnoremap <F5> :Bracey<CR>
 nnoremap <S-F5> :BraceyStop<CR>
 nnoremap <leader>r :so ~/.config/nvim/init.vim<CR>
+
+" set filetype for html files to djangohtml if they occur in this directory
+au BufNewFile,BufRead $DJANGO_DIR/**/*.html set filetype=htmldjango
 
 " Source the settings of coc
 source $HOME/.config/nvim/plug-config/coc.vim
