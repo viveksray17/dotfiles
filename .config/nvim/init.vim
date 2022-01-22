@@ -19,6 +19,8 @@ let g:NERDTreeIgnore = ['^node_modules$', '__pycache__', '__init__.py']
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 let mapleader = " "
+let g:coc_snippet_next = '<M-k>'
+let g:coc_snippet_prev = '<M-j>'
 set scrolloff=15
 set ignorecase
 set hlsearch
