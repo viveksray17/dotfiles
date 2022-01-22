@@ -63,7 +63,7 @@ nnoremap <S-F5> :BraceyStop<CR>
 nnoremap <leader>r :so ~/.config/nvim/init.vim<CR>
 
 " set filetype for html files to djangohtml if they occur in this directory
-au BufNewFile,BufRead $DJANGO_DIR/**/*.html set filetype=htmldjango
+au BufNewFile,BufRead ~/Documents/code/django/**/*.html set filetype=htmldjango
 
 " Source the settings of coc
 source $HOME/.config/nvim/plug-config/coc.vim
