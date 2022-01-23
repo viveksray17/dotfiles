@@ -1,12 +1,12 @@
 " Plugins
 call plug#begin('~/.local/share/nvim/plugged')
-    Plug 'honza/vim-snippets'
+    Plug 'honza/vim-snippets', {'do': 'rm -rf snippets'}
     Plug 'preservim/nerdcommenter'
     Plug 'preservim/nerdtree'
     Plug 'vim-python/python-syntax'
     Plug 'morhetz/gruvbox'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'turbio/bracey.vim'
+    Plug 'turbio/bracey.vim', {'do': 'npm update --prefix server && npm upgrade --prefix server && npm install --prefix server'}
     Plug 'tpope/vim-fugitive'
 call plug#end()
 
