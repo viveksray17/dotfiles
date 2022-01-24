@@ -44,7 +44,7 @@ sf(){
     [ "$directory" ] && cd $directory
 }
 de() { 
-    dir=$(ls -d -1 "$HOME/Documents/code/django/"* "$HOME/Documents/code/projects/"* "$HOME/Documents/code/learning/"* | fzf)
+    dir=$(ls -d -1 "$HOME/Documents/code/django/"* "$HOME/Documents/code/projects/"* "$HOME/Documents/code/learning/"* | grep -w -v "venv" | fzf)
     name=$(echo $dir | awk -F "/" '{ print $NF }')
     [ "$dir" ] && pushd $dir > /dev/null && \
     tmux new-session -d -s "$name" && \
