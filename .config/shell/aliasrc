@@ -23,6 +23,7 @@ alias \
 
 # EXTRA
 alias \
+    p='sudo pacman' \
     ls='ls --color=auto' \
     ll='ls -al --color=auto' \
     mi='sudo make clean install' \
@@ -31,7 +32,6 @@ alias \
     sk="cd ~/suckless" \
     config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME" \
     update="yay -Syu" \
-    find="find -name 2> /dev/null" \
     dac="source ../django-env/bin/activate" \
     tmux="tmux -f $HOME/.config/tmux.conf"
 
@@ -44,7 +44,7 @@ sf(){
     [ "$directory" ] && cd $directory
 }
 de() { 
-    dir=$(ls -d -1 "$HOME/Documents/code/django/"* "$HOME/Documents/code/projects/"* | fzf)
+    dir=$(ls -d -1 "$HOME/Documents/code/django/"* "$HOME/Documents/code/projects/"* "$HOME/Documents/code/learning/"* | fzf)
     name=$(echo $dir | awk -F "/" '{ print $NF }')
     [ "$dir" ] && pushd $dir > /dev/null && \
     tmux new-session -d -s "$name" && \
