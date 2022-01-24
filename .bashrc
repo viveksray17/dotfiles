@@ -1,7 +1,8 @@
-[ -f "$HOME/.config/shell/aliasrc" ] && source "$HOME/.config/shell/aliasrc"
 if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
-    tmux attach -t default || tmux new -s default
+    tmux -f $HOME/.config/tmux.conf attach -t default || tmux -f $HOME/.config/tmux.conf new -s default
+    killall st
 fi
+[ -f "$HOME/.config/shell/aliasrc" ] && source "$HOME/.config/shell/aliasrc"
 PS1="[\u@\h \w] "
 set -o vi
 bind -m vi-command 'Control-l: clear-screen'
