@@ -32,7 +32,7 @@ alias \
     sk="cd ~/suckless" \
     config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME" \
     update="yay -Syu" \
-    dac="source ../django-env/bin/activate" \
+    dac="source ../venv/bin/activate" \
     tmux="tmux -f $HOME/.config/tmux.conf"
 
 se(){ 
