@@ -18,6 +18,7 @@
   "htmldjango.completion.enable": false,
   "snippets.snipmate.enable": false,
   "htmldjango.djhtml.tabWidth": 2,
+  "python.linting.enabled": false,
   "prettier.formatterPriority": 1,
   "python.formatting.provider": "autopep8",
   "snippets.extends": {

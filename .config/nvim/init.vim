@@ -13,7 +13,6 @@ call plug#end()
 " Settings
 let g:python_highlight_all = 1
 let g:fzf_action = { 'ctrl-v': 'vsplit' }
-let g:NERDSpaceDelims = 1
 let NERDTreeMinimalUI=1
 let g:NERDTreeIgnore = ['^node_modules$', '__pycache__', '__init__.py']
 let g:NERDTreeDirArrowExpandable = ''
