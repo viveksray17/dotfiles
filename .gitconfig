@@ -3,7 +3,7 @@
 	email = viveksundaray123@outlook.com
     signingkey = viveksundaray123@outlook.com
 [core]
-	editor = vim
+	editor = nvim
 	autocrlf = input
 [init]
 	defaultBranch = main
