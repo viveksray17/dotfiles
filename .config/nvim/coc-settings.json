@@ -13,6 +13,7 @@
     "htmldjango"
   ],
   "htmldjango.formatting.provider": "djhtml",
+  "json.format.enable": false,
   "tsserver.enableJavascript": true,
   "tsserver.formatOnType": false,
   "typescript.format.enabled": false,
