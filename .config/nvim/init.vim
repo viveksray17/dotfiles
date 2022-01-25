@@ -27,7 +27,7 @@ set incsearch
 set tabstop=4
 set softtabstop=4
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set autoindent
 set nohlsearch
 filetype plugin indent on
@@ -65,6 +65,13 @@ nnoremap <leader>r :so ~/.config/nvim/init.vim<CR>
 
 " set filetype for html files to djangohtml if they occur in this directory
 au BufNewFile,BufRead ~/Documents/code/django/**/*.html set filetype=htmldjango
+
+"disable html extention in some filetypes
+augroup toggleCocExtensions
+    autocmd!
+    autocmd BufEnter *.vim,*.py,*.txt,*.cpp,*.h,*.c,*.js,*.ts call CocActionAsync('deactivateExtension', 'coc-html')
+    autocmd BufLeave *.vim,*.py,*.txt,*.cpp,*.h,*.c,*.js,*.ts call CocActionAsync('activeExtension', 'coc-html')
+augroup END
 
 " Source the settings of coc
 source $HOME/.config/nvim/plug-config/coc.vim

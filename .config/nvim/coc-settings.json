@@ -13,12 +13,9 @@
     "htmldjango"
   ],
   "htmldjango.formatting.provider": "djhtml",
-  "json.format.enable": false,
-  "tsserver.enableJavascript": true,
   "tsserver.formatOnType": false,
-  "typescript.format.enabled": false,
-  "javascript.format.enabled": false,
-  "html.format.enable": false,
+  "typescript.format.semicolons": "insert",
+  "javascript.format.semicolons": "insert",
   "htmldjango.completion.enable": false,
   "snippets.snipmate.enable": false,
   "htmldjango.djhtml.tabWidth": 2,
@@ -28,9 +25,14 @@
   "python.formatting.autopep8Path": "~/.local/bin/autopep8",
   "python.formatting.provider": "autopep8",
   "pyright.disableDiagnostics": true,
-  "prettier.formatterPriority": 1,
   "snippets.extends": {
-    "javascriptreact": ["javascript", "html"],
-    "typescript": ["javascript", "html"]
+    "javascriptreact": [
+      "javascript",
+      "html"
+    ],
+    "typescript": [
+      "javascript",
+      "html"
+    ]
   }
 }
