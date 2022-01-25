@@ -13,6 +13,11 @@
     "htmldjango"
   ],
   "htmldjango.formatting.provider": "djhtml",
+  "tsserver.enableJavascript": true,
+  "tsserver.formatOnType": false,
+  "typescript.format.enabled": false,
+  "javascript.format.enabled": false,
+  "html.format.enable": false,
   "htmldjango.completion.enable": false,
   "snippets.snipmate.enable": false,
   "htmldjango.djhtml.tabWidth": 2,
