@@ -36,6 +36,7 @@ set clipboard+=unnamedplus
 set nowrap
 set relativenumber
 set nu
+set guicursor=
 set laststatus=0 ruler
 
 " Colorscheme and background
