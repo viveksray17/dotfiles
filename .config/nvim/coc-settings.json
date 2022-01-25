@@ -32,5 +32,6 @@
     "typescriptreact": [
       "html"
     ]
-  }
+  },
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true
 }
