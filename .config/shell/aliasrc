@@ -4,7 +4,8 @@ alias \
     gs="git status" \
     ga="git add" \
     gc="git commit" \
-    gp="git push origin main" \
+    gpo="git push origin main" \
+    gp="git push" \
     gd="git diff" \
     gr="git remote -v" \
     gch="git checkout" \
@@ -12,6 +13,7 @@ alias \
     gra="git remote add origin" \
     grv="git remote remove origin" \
     gi="git init"
+    gb="git branch"
 
 # ALIASES FOR CONFIG
 alias \
@@ -50,4 +52,10 @@ de() {
     tmux new-session -d -s "$name" && \
     tmux switch-client -t "$name" && \
     popd > /dev/null
+}
+gprev(){
+    read -p "Enter commit hash: " commit_hash
+    git checkout $commit_hash
+    git branch -D main
+    git switch -c main
 }
