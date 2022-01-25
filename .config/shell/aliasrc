@@ -36,11 +36,11 @@ alias \
     tmux="tmux -f $HOME/.config/tmux.conf"
 
 se(){ 
-    file=$(du -a $HOME/.local/bin/* $HOME/.config/* | awk '{ print $2 }' | grep -w -v "libreoffice\|coc" | fzf)
+    file=$(find $HOME/.local/bin $HOME/.config -maxdepth 2 | grep -v "libreoffice\|VirtualBox" | fzf)
     [ "$file" ] && nvim $file
 }
 sf(){
-    directory=$(du -a $HOME/.local/bin/* $HOME/.config/* | awk '{ print $2 }' | grep -w -v "libreoffice\|coc" | fzf)
+    directory=$(find $HOME/.local/bin $HOME/.config -maxdepth 2 | grep -v "libreoffice\|VirtualBox" | fzf)
     [ "$directory" ] && cd $directory
 }
 de() { 
