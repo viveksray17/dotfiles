@@ -25,7 +25,9 @@ alias \
 
 # EXTRA
 alias \
-    p='sudo pacman' \
+    pi='sudo pacman -S' \
+    pr='sudo pacman -Rns' \
+    pu="yay -Syu" \
     ls='ls --color=auto' \
     ll='ls -al --color=auto' \
     mi='sudo make clean install' \
@@ -33,7 +35,6 @@ alias \
     dw="cd ~/suckless/dwm" \
     sk="cd ~/suckless" \
     config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME" \
-    update="yay -Syu" \
     dac="source ../venv/bin/activate" \
     tmux="tmux -f $HOME/.config/tmux.conf"
 
