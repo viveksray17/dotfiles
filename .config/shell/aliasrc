@@ -41,6 +41,7 @@ alias \
     config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME" \
     vac="source venv/bin/activate" \
     tmux="tmux -f $HOME/.config/tmux.conf" \
+    ta="tmux a" \
     mkdir='mkdir -pv'
 
 se(){ 
