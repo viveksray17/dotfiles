@@ -25,18 +25,23 @@ alias \
 
 # EXTRA
 alias \
+    ..='cd ..' \
+    ...='cd ../..' \
     pi='sudo pacman -S' \
     pr='sudo pacman -Rns' \
     pu="yay -Syu" \
-    ls='ls --color=auto' \
+    ps='pacman -Ss' \
+    pq='pacman -Qs' \
+    ls='ls -lh --color=auto -Ivenv -I__pycache__ -I__init__.py -Inode_modules' \
     ll='ls -al --color=auto' \
     mi='sudo make clean install' \
     sc="cd ~/.local/bin" \
     dw="cd ~/suckless/dwm" \
     sk="cd ~/suckless" \
     config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME" \
-    dac="source ../venv/bin/activate" \
-    tmux="tmux -f $HOME/.config/tmux.conf"
+    vac="source venv/bin/activate" \
+    tmux="tmux -f $HOME/.config/tmux.conf" \
+    mkdir='mkdir -pv'
 
 se(){ 
     file=$(find $HOME/.local/bin $HOME/.config -maxdepth 2 | grep -v "libreoffice\|VirtualBox" | fzf)
@@ -47,11 +52,10 @@ sf(){
     [ "$directory" ] && cd $directory
 }
 de() { 
-    dir=$(ls -d -1 "$HOME/Documents/code/django/"* "$HOME/Documents/code/projects/"* "$HOME/Documents/code/learning/"* | grep -w -v "venv" | fzf)
+    dir=$(/usr/bin/ls -d -1 "$HOME/Documents/code/python_projects/"* "$HOME/Documents/code/learning/"* | fzf)
     name=$(echo $dir | awk -F "/" '{ print $NF }')
     [ "$dir" ] && pushd $dir > /dev/null && \
-    tmux new-session -d -s "$name" && \
-    tmux switch-client -t "$name" && \
+    tmux new -s "$name" && \
     popd > /dev/null
 }
 gprev(){
