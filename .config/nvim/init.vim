@@ -14,16 +14,14 @@ call plug#end()
 let g:python_highlight_all = 1
 let g:fzf_action = { 'ctrl-v': 'vsplit' }
 let NERDTreeMinimalUI=1
-let g:NERDTreeIgnore = ['^node_modules$', '__pycache__', '__init__.py']
+let g:NERDTreeIgnore = ['^node_modules$', '__pycache__', '__init__.py', 'venv']
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 let mapleader = " "
 let g:coc_snippet_next = '<M-k>'
 let g:coc_snippet_prev = '<M-j>'
 set scrolloff=15
-set ignorecase
-set hlsearch
-set incsearch
+set formatoptions-=cro
 set tabstop=4
 set softtabstop=4
 set expandtab
@@ -65,7 +63,7 @@ nnoremap <S-F5> :BraceyStop<CR>
 nnoremap <leader>r :so ~/.config/nvim/init.vim<CR>
 
 " set filetype for html files to djangohtml if they occur in this directory
-au BufNewFile,BufRead ~/Documents/code/django/**/*.html set filetype=htmldjango
+au BufNewFile,BufRead ~/Documents/code/python_projects/**/*.html set filetype=htmldjango
 
 "disable html extention in some filetypes
 augroup toggleCocExtensions
