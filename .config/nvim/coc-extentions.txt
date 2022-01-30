@@ -1,7 +1,0 @@
-coc-snippets
-coc-pairs
-coc-html
-coc-tsserver
-coc-pyright
-coc-json
-coc-htmldjango
