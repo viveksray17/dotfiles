@@ -1,0 +1,5 @@
+require("lsp.lsp-installer")
+require("lsp.completion")
+require("lsp.null-ls")
+require("lsp.autopairs")
+require("lsp.handlers")
