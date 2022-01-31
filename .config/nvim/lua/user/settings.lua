@@ -17,13 +17,13 @@ local options = {
 	signcolumn = "number",
 	completeopt = { "menu", "menuone", "noselect" },
 }
+vim.g.python3_host_prog = vim.fn.expand("~/.local/share/nvim/neovim_env/bin/python3")
 
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
 vim.cmd([[
-	let g:python3_host_prog = expand('~/.local/share/nvim/neovim_env/bin/python3')
 	syntax enable
 	filetype plugin indent on
 	colorscheme gruvbox
