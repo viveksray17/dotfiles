@@ -35,12 +35,3 @@ nkeymapsilent("<leader>gc", ":Git commit<CR>")
 nkeymapsilent("<leader>gd", ":Git diff<CR>")
 nkeymapsilent("<leader>ck", ":Git checkout %<CR>")
 nkeymapsilent("<leader>gp", ":Git push<CR>")
-
--- LSP
-nkeymapsilent("gd", ":lua vim.lsp.buf.definition()<CR>")
-nkeymapsilent("gD", ":lua vim.lsp.buf.declaration()<CR>")
-nkeymapsilent("gi", ":lua vim.lsp.buf.implementation()<CR>")
-nkeymapsilent("gr", ":lua vim.lsp.buf.references()<CR>")
-nkeymapsilent("gt", ":lua vim.lsp.buf.type_definition()<CR>")
-nkeymapsilent("K", ":lua vim.lsp.buf.hover()<CR>")
-nkeymapsilent("rn", ":lua vim.lsp.buf.rename()<CR>")

@@ -1,4 +1,4 @@
-require("lsp.lsp-installer")
+require("lsp.lsp")
 require("lsp.completion")
 require("lsp.null-ls")
 require("lsp.autopairs")

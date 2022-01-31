@@ -6,7 +6,6 @@ require("paq")({
 	"numToStr/Comment.nvim",
 	"nvim-treesitter/nvim-treesitter",
 	"neovim/nvim-lspconfig",
-	"williamboman/nvim-lsp-installer",
 	"hrsh7th/nvim-cmp",
 	"hrsh7th/cmp-nvim-lsp",
 	"hrsh7th/cmp-buffer",
