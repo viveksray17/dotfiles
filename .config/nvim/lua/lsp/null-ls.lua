@@ -6,19 +6,10 @@ null_ls.setup({
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.djhtml.with({
 			extra_args = { "-t", "2" },
-			extra_filetypes = { "html" },
+			filetypes = { "html", "htmldjango" },
 		}),
 		formatting.stylua,
 	},
 	-- format on save
-	on_attach = function(client)
-		if client.resolved_capabilities.document_formatting then
-			vim.cmd([[
-			augroup LspFormatting
-				autocmd! * <buffer>
-				autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
-			augroup END
-            ]])
-		end
-	end,
+	on_attach = require("lsp.handlers").on_attach_null,
 })

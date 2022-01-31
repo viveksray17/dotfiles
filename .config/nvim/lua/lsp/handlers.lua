@@ -1,13 +1,8 @@
 local M = {}
 local cmp_nvim_lsp = require("cmp_nvim_lsp")
-
--- Capabilities
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
-
--- On Attach
 local opts = { noremap = true, silent = true }
+
+-- On Attach for language servers
 M.on_attach = function(client, bufnr)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
@@ -20,10 +15,22 @@ M.on_attach = function(client, bufnr)
 		client.resolved_capabilities.document_formatting = false
 	elseif client.resolved_capabilities.document_formatting then
 		vim.cmd([[
-        augroup LspFormatting
+        augroup lspformatting
 			autocmd! * <buffer>
-        	autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
-        augroup END
+        	autocmd bufwritepre <buffer> lua vim.lsp.buf.formatting_sync()
+        augroup end
+        ]])
+	end
+end
+
+-- On Attach for null-ls
+M.on_attach_null = function(client)
+	if client.resolved_capabilities.document_formatting then
+		vim.cmd([[
+        augroup lspformatting
+			autocmd! * <buffer>
+        	autocmd bufwritepre <buffer> lua vim.lsp.buf.formatting_sync()
+        augroup end
         ]])
 	end
 end
