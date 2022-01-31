@@ -16,8 +16,8 @@ M.on_attach = function(client, bufnr)
 	elseif client.resolved_capabilities.document_formatting then
 		vim.cmd([[
         augroup lspformatting
-		autocmd! * <buffer>
-		autocmd bufwritepre <buffer> lua vim.lsp.buf.formatting_sync()
+			autocmd! * <buffer>
+			autocmd bufwritepre <buffer> lua vim.lsp.buf.formatting_sync()
         augroup end
         ]])
 	end
@@ -28,8 +28,8 @@ M.on_attach_null = function(client)
 	if client.resolved_capabilities.document_formatting then
 		vim.cmd([[
         augroup lspformatting
-		autocmd! * <buffer>
-		autocmd bufwritepre <buffer> lua vim.lsp.buf.formatting_sync()
+			autocmd! * <buffer>
+			autocmd bufwritepre <buffer> lua vim.lsp.buf.formatting_sync()
         augroup end
         ]])
 	end
