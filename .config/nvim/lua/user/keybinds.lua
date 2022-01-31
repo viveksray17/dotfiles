@@ -3,10 +3,10 @@ local keymap = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 local nrp = { noremap = true }
 local function nkeymapsilent(key, map)
-	keymap("n", key, map, opts)
+  keymap("n", key, map, opts)
 end
 local function nkeymap(key, map)
-	keymap("n", key, map, nrp)
+  keymap("n", key, map, nrp)
 end
 
 -- leader key

@@ -2,7 +2,7 @@ local npairs = require("nvim-autopairs")
 local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 
 npairs.setup({
-	check_ts = true,
+  check_ts = true,
 })
 
 -- for nvim-cmp integration
