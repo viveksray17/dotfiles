@@ -1,5 +1,3 @@
-local lspsetup = require("lspconfig")
-
 local servers = { "pyright", "html" }
 for _, lsp in pairs(servers) do
 	require("lspconfig")[lsp].setup({
