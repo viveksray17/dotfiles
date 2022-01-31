@@ -2,10 +2,12 @@ local null_ls = require("null-ls")
 local formatting = require("null-ls").builtins.formatting
 
 null_ls.setup({
-	debug = true,
 	sources = {
 		formatting.black.with({ extra_args = { "--fast" } }),
-		formatting.djhtml.with({ extra_args = { "-t", "2" } }),
+		formatting.djhtml.with({
+			extra_args = { "-t", "2" },
+			extra_filetypes = { "html" },
+		}),
 		formatting.stylua,
 	},
 	-- format on save
