@@ -1,7 +1,12 @@
 local M = {}
-M.on_attach = function(client, bufnr)
-	if client.name == "tsserver" then
-		client.resolved_capabilities.document_formatting = false
+M.on_attach = function(client)
+	if client.resolved_capabilities.document_formatting then
+		vim.cmd([[
+        augroup LspFormatting
+			autocmd! * <buffer>
+        	autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()
+        augroup END
+        ]])
 	end
 end
 return M
