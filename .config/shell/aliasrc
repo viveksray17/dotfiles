@@ -12,7 +12,7 @@ alias \
     gl="git log" \
     gra="git remote add origin" \
     grv="git remote remove origin" \
-    gi="git init"
+    gi="git init" \
     gb="git branch"
 
 # ALIASES FOR CONFIG
