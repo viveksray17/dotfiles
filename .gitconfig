@@ -1,15 +1,15 @@
 [user]
-	name = Vivek Sundaray
-	email = viveksundaray123@outlook.com
-    signingkey = viveksundaray123@outlook.com
+  name = Vivek Sundaray
+  email = viveksundaray123@outlook.com
+  signingkey = viveksundaray123@outlook.com
 [core]
-	editor = nvim
-	autocrlf = input
+  editor = nvim
+  autocrlf = input
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [commit]
-    gpgsign = true
+  gpgsign = true
 [tag]
-    gpgSign = true
+  gpgSign = true
 [https]
-	sslverify = false
+  sslverify = false
