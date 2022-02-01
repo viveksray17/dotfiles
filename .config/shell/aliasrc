@@ -42,6 +42,8 @@ alias \
     vac="source venv/bin/activate" \
     tmux="tmux -f $HOME/.config/tmux.conf" \
     ta="tmux a" \
+    code="cd $HOME/Documents/code" \
+    al="nvim $HOME/.config/shell/aliasrc" \
     mkdir='mkdir -pv'
 
 se(){ 
