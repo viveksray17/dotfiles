@@ -44,7 +44,8 @@ alias \
     ta="tmux a" \
     code="cd $HOME/Documents/code" \
     al="nvim $HOME/.config/shell/aliasrc" \
-    mkdir='mkdir -pv'
+    mkdir='mkdir -pv' \
+    de="tmux-sessions"
 
 se(){ 
     file=$(find $HOME/.local/bin $HOME/.config -maxdepth 2 | grep -v "libreoffice\|VirtualBox" | fzf)
@@ -53,13 +54,6 @@ se(){
 sf(){
     directory=$(find $HOME/.local/bin $HOME/.config -maxdepth 2 | grep -v "libreoffice\|VirtualBox" | fzf)
     [ "$directory" ] && cd $directory
-}
-de() { 
-    dir=$(/usr/bin/ls -d -1 "$HOME/Documents/code/python_projects/"* "$HOME/Documents/code/learning/"* | fzf)
-    name=$(echo $dir | awk -F "/" '{ print $NF }')
-    [ "$dir" ] && pushd $dir > /dev/null && \
-    tmux new -s "$name" && \
-    popd > /dev/null
 }
 gprev(){
     read -p "Enter commit hash: " commit_hash
