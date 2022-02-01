@@ -1,0 +1,8 @@
+#!/bin/sh
+directories=(
+  ~/Documents/code/python_projects
+  ~/Documents/code/learning
+)
+dir=$(find $(printf "%s " "${directories[@]}") -mindepth 1 -maxdepth 1 -type d | fzf)
+name=$(basename "$dir")
+[ "$dir" ] && pushd $dir > /dev/null && tmux -f ~/.config/tmux.conf new -s "$name" && popd > /dev/null
