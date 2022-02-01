@@ -11,9 +11,7 @@ M.on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-  if client.name == "html" then
-    client.resolved_capabilities.document_formatting = false
-  elseif client.resolved_capabilities.document_formatting then
+  if client.resolved_capabilities.document_formatting then
     vim.cmd([[
     augroup lspformatting
       autocmd! * <buffer>
