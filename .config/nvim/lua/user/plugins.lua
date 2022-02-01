@@ -2,7 +2,6 @@ require("paq")({
   "savq/paq-nvim",
   "morhetz/gruvbox",
   "tpope/vim-fugitive",
-  "preservim/nerdtree",
   "numToStr/Comment.nvim",
   "nvim-treesitter/nvim-treesitter",
   "neovim/nvim-lspconfig",

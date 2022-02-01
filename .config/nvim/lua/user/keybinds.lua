@@ -13,16 +13,17 @@ end
 vim.g.mapleader = " "
 
 -- general keybinds
-nkeymapsilent("H", ":bprev<CR>")
-nkeymapsilent("L", ":bnext<CR>")
+nkeymapsilent("H", "<cmd>bprev<CR>")
+nkeymapsilent("L", "<cmd>bnext<CR>")
 nkeymapsilent("U", "<c-r>")
-nkeymapsilent("<c-x>", ":NERDTreeToggle<CR>")
-nkeymapsilent("<leader>d", ":bdelete<CR>")
-nkeymapsilent("<leader>e", ":FZF<CR>")
+nkeymapsilent("<c-x>", "<cmd>NERDTreeToggle<CR>")
+nkeymapsilent("<leader>d", "<cmd>bdelete<CR>")
+nkeymapsilent("<leader>e", "<cmd>FZF<CR>")
 nkeymapsilent("<C-g>", "<C-a>")
-nkeymap("<leader>r", ":so %<CR>")
-nkeymap("<leader>f", ":echo &filetype<CR>")
-nkeymap("<leader>ls", ":LspInfo<CR>")
+nkeymap("<leader>r", "<cmd>so %<CR>")
+nkeymap("<leader>f", "<cmd>echo &filetype<CR>")
+nkeymap("<leader>pv", "<cmd>Ex<CR>")
+nkeymap("<leader>ls", "<cmd>LspInfo<CR>")
 
 -- window navigation
 nkeymap("<c-h>", "<c-w>h")
@@ -31,8 +32,8 @@ nkeymap("<c-j>", "<c-w>j")
 nkeymap("<c-k>", "<c-w>k")
 
 -- vim-fugitive
-nkeymapsilent("<leader>gs", ":G<CR>")
-nkeymapsilent("<leader>gc", ":Git commit<CR>")
-nkeymapsilent("<leader>gd", ":Git diff<CR>")
-nkeymapsilent("<leader>ck", ":Git checkout %<CR>")
-nkeymapsilent("<leader>gp", ":Git push<CR>")
+nkeymapsilent("<leader>gs", "<cmd>G<CR>")
+nkeymapsilent("<leader>gc", "<cmd>Git commit<CR>")
+nkeymapsilent("<leader>gd", "<cmd>Git diff<CR>")
+nkeymapsilent("<leader>ck", "<cmd>Git checkout %<CR>")
+nkeymapsilent("<leader>gp", "<cmd>Git push<CR>")
