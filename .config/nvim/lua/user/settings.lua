@@ -3,6 +3,7 @@ local options = {
   wrap = false,
   relativenumber = true,
   nu = true,
+  numberwidth = 1, -- width for line number
   laststatus = 0,
   hlsearch = false,
   expandtab = true,
@@ -27,6 +28,7 @@ vim.cmd([[
   syntax enable
   filetype plugin indent on
   colorscheme gruvbox
-  highlight Normal ctermbg=NONE
+  highlight Normal ctermbg=none
+  hi Visual cterm=none ctermbg=darkgrey
   autocmd BufNewFile,BufRead ~/Documents/code/python_projects/**/*.html set ft=htmldjango
 ]])
