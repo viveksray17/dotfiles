@@ -7,6 +7,7 @@ local options = {
   hlsearch = false,
   expandtab = true,
   shiftwidth = 2,
+  tabstop = 2,
   scrolloff = 15,
   autoindent = true,
   clipboard = "unnamedplus",
