@@ -20,7 +20,7 @@ nkeymapsilent("<C-g>", "<C-a>")
 nkeymap("<leader>r", ":so %<CR>")
 nkeymap("<leader>f", "<cmd>echo &filetype<CR>")
 nkeymap("<leader>pv", "<cmd>Ex<CR>")
-nkeymap("<leader>nv", "<cmd>Ex ~/.config/nvim/lua<CR>")
+nkeymap("<leader>nv", "<cmd>FZF ~/.config/nvim/lua<CR>")
 nkeymap("<leader>ls", "<cmd>LspInfo<CR>")
 
 -- window navigation
