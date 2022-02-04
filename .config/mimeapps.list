@@ -1,6 +1,0 @@
-[Default Applications]
-application/pdf=org.gnome.Evince.desktop
-inode/directory=pcmanfm.desktop
-video/mp4=mpv.desktop
-image/png=sxiv.desktop
-image/jpeg=sxiv.desktop
