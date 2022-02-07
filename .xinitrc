@@ -1,6 +1,7 @@
 #!/bin/sh
-xmodmap -e 'keycode 66 = Escape'
-xmodmap -e 'clear lock'
+setxkbmap -option ctrl:nocaps
+xmodmap -e 'keycode 37 = '
+xcape -e 'Control_L=Escape'
 xrdb -merge $HOME/.Xresources
 picom &
 ~/.fehbg &
