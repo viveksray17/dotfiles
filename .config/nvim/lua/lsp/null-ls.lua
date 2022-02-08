@@ -3,7 +3,7 @@ local formatting = require("null-ls").builtins.formatting
 
 null_ls.setup({
   sources = {
-    formatting.black.with({ extra_args = { "--fast" } }),
+    formatting.autopep8,
     formatting.djhtml.with({
       extra_args = { "-t", "2" },
       filetypes = { "html", "htmldjango" },
