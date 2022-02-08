@@ -1,6 +1,6 @@
+require("user.plugins")
 require("user.settings")
 require("user.keybinds")
-require("user.plugins")
 require("user.netrw")
 require("user.treesitter")
 require("Comment").setup()
