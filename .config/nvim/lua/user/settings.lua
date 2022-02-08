@@ -17,6 +17,7 @@ local options = {
   writebackup = false,
   signcolumn = "number",
   completeopt = { "menu", "menuone", "noselect" },
+  hidden = false,
 }
 vim.g.python3_host_prog = vim.fn.expand("~/.local/share/nvim/neovim_env/bin/python3")
 
