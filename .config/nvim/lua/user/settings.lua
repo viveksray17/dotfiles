@@ -31,5 +31,6 @@ vim.cmd([[
   colorscheme gruvbox
   highlight Normal ctermbg=none
   hi Visual cterm=none ctermbg=darkgrey
+  let g:fzf_layout = { 'down': '25%' }
   autocmd BufNewFile,BufRead ~/Documents/code/python_projects/**/*.html set ft=htmldjango
 ]])
