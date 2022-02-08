@@ -14,6 +14,9 @@ vim.g.mapleader = " "
 nkeymapsilent("H", "<cmd>bprev<CR>")
 nkeymapsilent("L", "<cmd>bnext<CR>")
 nkeymapsilent("U", "<c-r>") -- redo
+nkeymapsilent("x", '"_x') -- not to put the cut into the register
+nkeymapsilent("d", '"_d') -- not to put the word into the register
+nkeymapsilent("<leader>wr", "ciw<C-r>0<Esc>")
 nkeymapsilent("<leader>d", "<cmd>bdelete<CR>")
 nkeymapsilent("<leader>e", "<cmd>FZF<CR>")
 nkeymapsilent("<C-g>", "<C-a>")
