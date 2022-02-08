@@ -29,7 +29,6 @@ alias \
     ...='cd ../..' \
     pi='sudo pacman -S' \
     pr='sudo pacman -Rns' \
-    pu="yay -Syu" \
     ps='pacman -Ss' \
     pq='pacman -Qs' \
     ls='ls -lh --color=auto -Ivenv -I__pycache__ -I__init__.py -Inode_modules' \
@@ -60,4 +59,11 @@ gprev(){
     git checkout $commit_hash
     git branch -D main
     git switch -c main
+}
+update(){
+    yay -Syu;
+    sudo npm update -g;
+    packages=$(pip list --outdated | sed 's/ .*//' | tail -n +3)
+    [ "$packages" ] && pip list --outdated | sed 's/ .*//' | tail -n +3 | xargs pip install --upgrade || \
+      echo "All pip packages are up-to-date"
 }
