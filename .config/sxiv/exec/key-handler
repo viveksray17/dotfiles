@@ -1,11 +1,11 @@
 #!/bin/sh
 while read file
 do
-        case "$1" in
-        "d")
-                rm $file;;
-        "w")
-                feh --bg-scale "$file" && notify-send "sxiv" "wallpaper change to $file";;
-        esac
+  case "$1" in
+  "d")
+    rm $file;;
+  "w")
+    feh --bg-scale "$file" && notify-send "sxiv" "wallpaper change to $file";;
+  esac
 done
 
