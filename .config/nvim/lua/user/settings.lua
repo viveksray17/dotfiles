@@ -20,6 +20,7 @@ local options = {
   hidden = false,
 }
 vim.g.python3_host_prog = vim.fn.expand("~/.local/share/nvim/neovim_env/bin/python3")
+vim.g.buftabline_show = 1
 
 for k, v in pairs(options) do
   vim.opt[k] = v
