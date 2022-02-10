@@ -33,10 +33,7 @@ alias \
     pq='pacman -Qs' \
     ls='ls -lh --color=auto -Ivenv -I__pycache__ -I__init__.py -Inode_modules' \
     ll='ls -al --color=auto' \
-    mi='sudo make clean install' \
     sc="cd ~/.local/bin" \
-    dw="cd ~/suckless/dwm" \
-    sk="cd ~/suckless" \
     config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME" \
     vac="source venv/bin/activate" \
     tmux="tmux -f $HOME/.config/tmux.conf" \

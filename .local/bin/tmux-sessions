@@ -5,4 +5,4 @@ directories=(
 )
 dir=$(find $(printf "%s " "${directories[@]}") -mindepth 1 -maxdepth 1 -type d | dmenu -i -l 5)
 name=$(basename "$dir")
-[ "$dir" ] && pushd $dir > /dev/null && st -e tmux -f ~/.config/tmux.conf new -s $name && popd > /dev/null
+[ "$dir" ] && pushd $dir > /dev/null && $TERMINAL -e "tmux -f $HOME/.config/tmux.conf new -s $name" && popd > /dev/null

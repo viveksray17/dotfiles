@@ -1,2 +1,2 @@
 #!/bin/sh
-scrot -q 100 -p ~/Pictures/Screenshots/screenshot_%Y-%m-%d_%T.png -e 'xclip -selection c -t image/png < $f' && notify-send 'Scrot' 'Full-Screen Captured' --expire-time=2000
+maim ~/Pictures/Screenshots/screenshot_$(date '+%Y-%m-%d_%T').png | xclip -selection clipboard -t image/png

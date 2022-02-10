@@ -3,8 +3,8 @@ local options = {
   wrap = false,
   relativenumber = true,
   nu = true,
-  numberwidth = 1, -- width for line number
   laststatus = 0,
+  numberwidth = 1,
   hlsearch = false,
   expandtab = true,
   shiftwidth = 2,
@@ -20,7 +20,6 @@ local options = {
   hidden = false,
 }
 vim.g.python3_host_prog = vim.fn.expand("~/.local/share/nvim/neovim_env/bin/python3")
-vim.g.buftabline_show = 1
 
 for k, v in pairs(options) do
   vim.opt[k] = v
