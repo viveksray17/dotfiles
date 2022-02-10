@@ -1,4 +1,5 @@
 # Dotfiles
+![Alt Text](screenshot.png?raw=true)
 
 ### Installation
 
