@@ -1,0 +1,20 @@
+separator=false
+
+[network]
+command=echo "network: $(network)"
+interval=once
+color=#00FF00
+
+[volume]
+command=echo "volume: $(volume)%"
+interval=once
+signal=10
+color=#FFD700
+
+[time]
+command=date '+%d-%m-%Y %H:%M (%a)'
+interval=60
+
+[firefox]
+full_text="🦊"
+command=firefox
