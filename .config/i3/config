@@ -1,15 +1,14 @@
 set $mod Mod4
 
-font pango:Fira Mono Medium 10
+font pango:Monospace 10
 
 for_window [class="^.*"] border pixel 2
 new_window 1pixel
 
-set $refresh_i3blocks_volume pkill -SIGRTMIN+10 i3blocks
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && $refresh_i3blocks_volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% && $refresh_i3blocks_volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-volume 0 0% && $refresh_i3blocks_volume
-bindsym Shift+XF86AudioMute exec --no-startup-id pactl set-sink-volume 0 50% && $refresh_i3blocks_volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-volume 0 0%
+bindsym Shift+XF86AudioMute exec --no-startup-id pactl set-sink-volume 0 50%
 
 bindsym Print exec fullscreenshot
 bindsym Shift+Print exec areascreenshot
@@ -96,6 +95,6 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-bar {
-  status_command i3blocks
+bar{
+  status_command i3status
 }
