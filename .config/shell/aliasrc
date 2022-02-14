@@ -4,7 +4,7 @@ alias \
     gs="git status" \
     ga="git add" \
     gc="git commit" \
-    gpo="git push origin main" \
+    gpo="git push origin master" \
     gp="git push" \
     gd="git diff" \
     gr="git remote -v" \
@@ -20,21 +20,22 @@ alias \
     cs="config status" \
     ca="config add" \
     cc="config commit" \
-    cps="config push origin main" \
+    cps="config push origin master" \
     cdf="config diff"
 
 # EXTRA
 alias \
     ..='cd ..' \
     ...='cd ../..' \
-    pi='sudo pacman -S' \
-    pr='sudo pacman -Rns' \
-    ps='pacman -Ss' \
-    pq='pacman -Qs' \
+    ai='sudo apt install' \
+    ar='sudo apt purge --autoremove' \
+    as='apt search' \
+    aq='apt list --installed' \
     ls='ls -lh --color=auto -Ivenv -I__pycache__ -I__init__.py -Inode_modules' \
     ll='ls -al --color=auto' \
     sc="cd ~/.local/bin" \
     config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME" \
+    rm="rm -rf" \
     vac="source venv/bin/activate" \
     tmux="tmux -f $HOME/.config/tmux.conf" \
     ta="tmux a" \
@@ -58,7 +59,7 @@ gprev(){
     git switch -c main
 }
 update(){
-    yay -Syu;
+    sudo apt update && sudo apt upgrade;
     sudo npm update -g;
     packages=$(pip list --outdated | sed 's/ .*//' | tail -n +3)
     [ "$packages" ] && pip list --outdated | sed 's/ .*//' | tail -n +3 | xargs pip install --upgrade || \

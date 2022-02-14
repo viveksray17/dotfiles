@@ -1,4 +1,3 @@
 #!/bin/bash
-shutdown="sudo /usr/bin/poweroff"
 chosen=$(echo -e "no\nyes" | dmenu -i -p "poweroff")
-[ "$chosen" = "yes" ] && $shutdown
+[ "$chosen" = "yes" ] && poweroff

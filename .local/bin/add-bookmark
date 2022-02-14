@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 read -p 'enter bookmark name: ' bookmark_name
 read -p 'enter bookmark url: ' bookmark_url
 touch $HOME/.local/share/bookmarks/$bookmark_name
@@ -6,5 +6,5 @@ echo "$bookmark_url" > $HOME/.local/share/bookmarks/$bookmark_name
 pushd ~/.local/share/bookmarks > /dev/null
 git add -A
 git commit -m "Added bookmark $bookmark_name"
-git push origin main
+git push origin master
 popd > /dev/null

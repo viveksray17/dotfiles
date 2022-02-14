@@ -1,5 +1,5 @@
 #!/bin/bash
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
 export EDITOR="nvim"
 export TERMINAL="xfce4-terminal"
 export HISTFILE="$HOME/.cache/.bash_history"

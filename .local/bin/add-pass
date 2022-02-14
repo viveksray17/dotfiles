@@ -1,5 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 read -p "Enter service name: " service
 pass add $service
-cd $HOME/.password-store
-git push origin main --force
+pushd $HOME/.password-store > /dev/null
+git push origin master --force
+popd > /dev/null
