@@ -20,6 +20,7 @@ local options = {
   hidden = false,
 }
 vim.g.python3_host_prog = vim.fn.expand("~/.local/share/nvim/neovim_env/bin/python3")
+vim.g.fzf_layout = { ["down"] = "20%" }
 
 for k, v in pairs(options) do
   vim.opt[k] = v
@@ -31,7 +32,6 @@ vim.cmd([[
   colorscheme gruvbox
   highlight Normal ctermbg=none
   hi Visual cterm=none ctermbg=darkgrey
-  let g:fzf_layout = { 'down': '20%' }
   autocmd BufNewFile,BufRead ~/Documents/code/python_projects/**/*.html set ft=htmldjango
   autocmd TermOpen * setlocal nonumber norelativenumber nosmd
 ]])
