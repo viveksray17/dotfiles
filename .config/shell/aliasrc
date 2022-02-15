@@ -1,67 +1,62 @@
 #!/bin/sh
 # ALIASES FOR GIT
 alias \
-    gs="git status" \
-    ga="git add" \
-    gc="git commit" \
-    gpo="git push origin master" \
-    gp="git push" \
-    gd="git diff" \
-    gr="git remote -v" \
-    gch="git checkout" \
-    gl="git log" \
-    gra="git remote add origin" \
-    grv="git remote remove origin" \
-    gi="git init" \
-    gb="git branch"
+  gs="git status" \
+  ga="git add" \
+  gc="git commit" \
+  gpo="git push origin master" \
+  gp="git push" \
+  gd="git diff" \
+  gr="git remote -v" \
+  gch="git checkout" \
+  gl="git log" \
+  gra="git remote add origin" \
+  grv="git remote remove origin" \
+  gi="git init" \
+  gb="git branch"
 
 # ALIASES FOR CONFIG
 alias \
-    cs="config status" \
-    ca="config add" \
-    cc="config commit" \
-    cps="config push origin master" \
-    cdf="config diff"
+  cs="config status" \
+  ca="config add" \
+  cc="config commit" \
+  cps="config push origin master" \
+  cdf="config diff"
 
 # EXTRA
 alias \
-    ..='cd ..' \
-    ...='cd ../..' \
-    ai='sudo apt install' \
-    ar='sudo apt purge --autoremove' \
-    as='apt search' \
-    aq='apt list --installed' \
-    ls='ls -lh --color=auto -Ivenv -I__pycache__ -I__init__.py -Inode_modules' \
-    ll='ls -al --color=auto' \
-    sc="cd ~/.local/bin" \
-    config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME" \
-    rm="rm -rf" \
-    vac="source venv/bin/activate" \
-    tmux="tmux -f $HOME/.config/tmux.conf" \
-    ta="tmux a" \
-    code="cd $HOME/Documents/code" \
-    al="nvim $HOME/.config/shell/aliasrc" \
-    mkdir='mkdir -pv' \
-    de="tmux-sessions"
+  ..='cd ..' \
+  ...='cd ../..' \
+  ai='sudo apt install' \
+  au='sudo apt update && sudo apt upgrade' \
+  ar='sudo apt purge --autoremove' \
+  as='apt search' \
+  aq='apt list --installed' \
+  nu='sudo npm update -g' \
+  ls='ls -lh --color=auto -Ivenv -I__pycache__ -I__init__.py -Inode_modules' \
+  ll='ls -al --color=auto' \
+  sc="cd ~/.local/bin" \
+  config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME" \
+  rm="rm -rf" \
+  vac="source venv/bin/activate" \
+  tmux="tmux -f $HOME/.config/tmux.conf" \
+  ta="tmux a" \
+  code="cd $HOME/Documents/code" \
+  al="nvim $HOME/.config/shell/aliasrc" \
+  mkdir='mkdir -pv' \
+  de="tmux-sessions"
 
 se(){ 
-    file=$(find $HOME/.local/bin $HOME/.config -maxdepth 2 | grep -v "libreoffice\|VirtualBox" | fzf)
-    [ "$file" ] && nvim $file
+  file=$(find $HOME/.local/bin $HOME/.config -maxdepth 2 | grep -v "libreoffice\|VirtualBox" | fzf)
+  [ "$file" ] && nvim $file
 }
 sf(){
-    directory=$(find $HOME/.local/bin $HOME/.config -maxdepth 2 | grep -v "libreoffice\|VirtualBox" | fzf)
-    [ "$directory" ] && cd $directory
+  directory=$(find $HOME/.local/bin $HOME/.config -maxdepth 2 | grep -v "libreoffice\|VirtualBox" | fzf)
+  [ "$directory" ] && cd $directory
 }
 gprev(){
-    read -p "Enter commit hash: " commit_hash
-    git checkout $commit_hash
-    git branch -D main
-    git switch -c main
-}
-update(){
-    sudo apt update && sudo apt upgrade;
-    sudo npm update -g;
-    packages=$(pip list --outdated | sed 's/ .*//' | tail -n +3)
-    [ "$packages" ] && pip list --outdated | sed 's/ .*//' | tail -n +3 | xargs pip install --upgrade || \
-      echo "All pip packages are up-to-date"
+  read -p "Enter commit hash: " commit_hash
+  git checkout $commit_hash
+  git branch -D master
+  git switch -c master
 }
