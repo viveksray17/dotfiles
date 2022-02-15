@@ -14,4 +14,5 @@ require("paq")({
   "nvim-lua/plenary.nvim",
   "jose-elias-alvarez/null-ls.nvim",
   "windwp/nvim-autopairs",
+  "junegunn/fzf",
 })
