@@ -1,6 +1,4 @@
 # Dotfiles
-![Alt Text](screenshot.png?raw=true)
-
 ### Installation
 
 0. PREREQUISITE -> git
