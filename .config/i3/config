@@ -17,31 +17,32 @@ floating_modifier $mod
 bindsym $mod+Return exec $TERMINAL
 bindsym $mod+Shift+c kill
 bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+n exec --no-startup-id $TERMINAL --hide-menubar -e "nmtui-connect"
-bindsym $mod+v exec --no-startup-id $TERMINAL --hide-menubar -e "pulsemixer"
+bindsym $mod+n exec --no-startup-id $TERMINAL -e "nmtui-connect"
 bindsym $mod+g exec --no-startup-id tmux-sessions
 bindsym $mod+x exec --no-startup-id dmenupoweroff
 bindsym $mod+s exec --no-startup-id dmenureboot
 bindsym $mod+p exec --no-startup-id passmenu
 bindsym $mod+e exec --no-startup-id pcmanfm
-bindsym $mod+shift+p exec --no-startup-id $TERMINAL --hide-menubar -e "add-pass"
+bindsym $mod+shift+p exec --no-startup-id $TERMINAL -e "add-pass"
 bindsym $mod+b exec --no-startup-id dmenubookmarks
-bindsym $mod+shift+b exec --no-startup-id $TERMINAL --hide-menubar -e "add-bookmark"
+bindsym $mod+shift+b exec --no-startup-id $TERMINAL -e "add-bookmark"
+bindsym $mod+o exec --no-startup-id dmenuemail
+bindsym $mod+shift+o exec --no-startup-id $TERMINAL -e "add-email"
 bindsym $mod+w exec --no-startup-id firefox
 bindsym $mod+F3 exec --no-startup-id sxiv -t -f $HOME/Pictures/wallpapers
 bindsym --release $mod+u exec slock
 
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
-bindsym $mod+h split v
+bindsym $mod+v split v
 bindsym $mod+Shift+v split h
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+space floating toggle
@@ -84,10 +85,10 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 mode "resize" {
-  bindsym j resize shrink width 10 px or 10 ppt
-  bindsym k resize grow height 10 px or 10 ppt
-  bindsym l resize shrink height 10 px or 10 ppt
-  bindsym semicolon resize grow width 10 px or 10 ppt
+  bindsym h resize shrink width 10 px or 10 ppt
+  bindsym j resize grow height 10 px or 10 ppt
+  bindsym k resize shrink height 10 px or 10 ppt
+  bindsym l resize grow width 10 px or 10 ppt
   
   bindsym Return mode "default"
   bindsym Escape mode "default"
