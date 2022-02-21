@@ -9,7 +9,7 @@ alias \
   gd="git diff" \
   gr="git remote -v" \
   gch="git checkout" \
-  gl="git log" \
+  gl="git log -p" \
   gra="git remote add origin" \
   grv="git remote remove origin" \
   gi="git init" \
@@ -55,8 +55,7 @@ sf(){
   [ "$directory" ] && cd $directory
 }
 gprev(){
-  read -p "Enter commit hash: " commit_hash
-  git checkout $commit_hash
+  git checkout $1
   git branch -D master
   git switch -c master
 }
