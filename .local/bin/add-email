@@ -1,9 +1,26 @@
 #!/bin/bash
-read -p 'enter email name: ' service_name
-read -p 'enter email url: ' email
-touch $HOME/.local/share/email/$service_name
-echo "$email" > $HOME/.local/share/email/$service_name
-pushd ~/.local/share/email > /dev/null
+EMAILS=(
+  "viveksundaray123@outlook.com"
+  "viveksray17@gmail.com"
+  "8109v@sbdav.co.in"
+)
+read -p 'enter service name: ' service_name
+
+for ((i = 0; i < ${#EMAILS[@]}; i++)); do
+  echo "[$i] ${EMAILS[$i]}"
+done
+
+read -p 'enter email number: ' email_number
+for ((i = 0; i < ${#EMAILS[@]}; i++)); do
+  case $email_number in
+    $i)
+      email="${EMAILS[$i]}"
+  esac
+done
+
+touch $HOME/.local/share/emails/$service_name
+echo "$email" > $HOME/.local/share/emails/$service_name
+pushd $HOME/.local/share/emails > /dev/null
 git add -A
 git commit -m "Added service $service_name"
 git push origin master
