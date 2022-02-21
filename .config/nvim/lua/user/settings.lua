@@ -2,10 +2,10 @@ local options = {
   guicursor = "",
   wrap = false,
   relativenumber = true,
+  laststatus = 2,
   nu = true,
-  laststatus = 0,
-  numberwidth = 1,
   hlsearch = false,
+  numberwidth = 1,
   expandtab = true,
   shiftwidth = 2,
   tabstop = 2,
@@ -15,9 +15,8 @@ local options = {
   encoding = "utf-8",
   backup = false,
   writebackup = false,
-  signcolumn = "number",
+  signcolumn = "yes",
   completeopt = { "menu", "menuone", "noselect" },
-  hidden = false,
 }
 vim.g.python3_host_prog = vim.fn.expand("~/.local/share/nvim/neovim_env/bin/python3")
 vim.g.fzf_layout = { ["down"] = "20%" }
@@ -32,6 +31,10 @@ vim.cmd([[
   colorscheme gruvbox
   highlight Normal ctermbg=none
   hi Visual cterm=none ctermbg=darkgrey
-  autocmd BufNewFile,BufRead ~/Documents/code/python_projects/**/*.html set ft=htmldjango
-  autocmd TermOpen * setlocal nonumber norelativenumber nosmd
+  nnoremap <silent> s* :let @/='\<'.expand('<cword>').'\>'<CR>cgn
+  augroup general
+    autocmd!
+    autocmd BufNewFile,BufRead ~/Documents/code/python_projects/**/*.html set ft=htmldjango
+    autocmd TermOpen * setlocal nonumber norelativenumber nosmd signcolumn=no
+  augroup end
 ]])

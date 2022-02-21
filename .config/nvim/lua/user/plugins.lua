@@ -8,11 +8,11 @@ require("paq")({
   "hrsh7th/nvim-cmp",
   "hrsh7th/cmp-nvim-lsp",
   "hrsh7th/cmp-buffer",
-  "rafamadriz/friendly-snippets",
   "saadparwaiz1/cmp_luasnip",
   "L3MON4D3/LuaSnip",
   "nvim-lua/plenary.nvim",
   "jose-elias-alvarez/null-ls.nvim",
   "windwp/nvim-autopairs",
   "junegunn/fzf",
+  "junegunn/fzf.vim",
 })

@@ -1,7 +1,6 @@
 local cmp = require("cmp")
+require("luasnip.loaders.from_snipmate").load()
 local luasnip = require("luasnip")
-require("luasnip.loaders.from_snipmate").load() -- Custom snippet(in snippets folder) for unsupported languages
-require("luasnip.loaders.from_vscode").lazy_load() -- Default Snippets from rafamadriz/friendly-snippets
 
 cmp.setup({
   snippet = {

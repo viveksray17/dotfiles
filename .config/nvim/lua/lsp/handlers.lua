@@ -11,7 +11,7 @@ M.on_attach = function(client, bufnr)
   bufkeymap("gr", "<cmd>lua vim.lsp.buf.references()<CR>")
   bufkeymap("gt", "<cmd>lua vim.lsp.buf.type_definition()<CR>")
   bufkeymap("K", "<cmd>lua vim.lsp.buf.hover()<CR>")
-  bufkeymap("rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
+  bufkeymap("gn", "<cmd>lua vim.lsp.buf.rename()<CR>")
   if client.resolved_capabilities.document_formatting then
     vim.cmd([[
     augroup lspformatting
