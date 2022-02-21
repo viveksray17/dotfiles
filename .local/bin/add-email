@@ -1,0 +1,10 @@
+#!/bin/bash
+read -p 'enter email name: ' service_name
+read -p 'enter email url: ' email
+touch $HOME/.local/share/email/$service_name
+echo "$email" > $HOME/.local/share/email/$service_name
+pushd ~/.local/share/email > /dev/null
+git add -A
+git commit -m "Added service $service_name"
+git push origin master
+popd > /dev/null

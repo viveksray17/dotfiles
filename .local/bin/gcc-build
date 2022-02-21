@@ -1,0 +1,7 @@
+#!/bin/bash
+if [ ! -d "build" ]; then
+  mkdir build
+fi
+filename=$(basename $1 | awk -F "." '{print $1}')
+gcc $1 -o "build/$filename"
+./build/$filename
