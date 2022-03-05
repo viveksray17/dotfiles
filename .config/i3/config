@@ -15,7 +15,7 @@ bindsym Shift+Print exec areascreenshot
 
 floating_modifier $mod
 bindsym $mod+Return exec $TERMINAL
-bindsym $mod+Shift+c kill
+bindsym $mod+q kill
 bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+n exec --no-startup-id $TERMINAL -e "nmtui-connect"
 bindsym $mod+g exec --no-startup-id tmux-sessions
@@ -80,6 +80,10 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
+
+assign [class="Firefox"] $ws1
+assign [class="st-256color"] $ws2
+assign [class="Zathura"] $ws3
 
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
