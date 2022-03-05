@@ -26,7 +26,7 @@ end
 M.on_attach_null = function(client)
   if client.resolved_capabilities.document_formatting then
     vim.cmd([[
-    augroup lspformatting
+    augroup lspformattingexternal
       autocmd! * <buffer>
       autocmd bufwritepre <buffer> lua vim.lsp.buf.formatting_sync()
     augroup end
