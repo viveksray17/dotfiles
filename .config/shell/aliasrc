@@ -4,16 +4,18 @@ alias \
   gs="git status" \
   ga="git add" \
   gc="git commit" \
-  gpo="git push origin master" \
-  gp="git push" \
-  gd="git diff" \
+  gcl="git clone" \
+  gpm="git push origin master" \
+  gp="git push origin" \
+  gdf="git diff" \
   gr="git remote -v" \
   gch="git checkout" \
   gl="git log -p" \
   gra="git remote add origin" \
   grv="git remote remove origin" \
   gi="git init" \
-  gb="git branch"
+  gb="git branch" \
+  dcp="docker container prune --force"
 
 # ALIASES FOR CONFIG
 alias \
@@ -43,7 +45,7 @@ alias \
   ta="tmux a" \
   code="cd $HOME/Documents/code" \
   al="nvim $HOME/.config/shell/aliasrc" \
-  mkdir='mkdir -pv' \
+  mkdir='mkdir -p' \
   de="tmux-sessions"
 
 se(){ 
@@ -58,4 +60,8 @@ gprev(){
   git checkout $1
   git branch -D master
   git switch -c master
+}
+
+drd(){
+  docker rmi $(docker images -qa -f 'dangling=true')
 }
