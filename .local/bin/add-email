@@ -3,6 +3,7 @@ EMAILS=(
   "viveksundaray123@outlook.com"
   "viveksray17@gmail.com"
   "8109v@sbdav.co.in"
+  "viveksray17"
 )
 read -p 'enter service name: ' service_name
 
