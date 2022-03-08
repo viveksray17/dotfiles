@@ -32,7 +32,7 @@ alias \
   ai='sudo apt install' \
   au='sudo apt update && sudo apt upgrade' \
   ar='sudo apt purge --autoremove' \
-  as='apt search' \
+  as='apt list | rg ' \
   aq='apt list --installed' \
   nu='sudo npm update -g' \
   ls='ls -lh --color=auto -Ivenv -I__pycache__ -I__init__.py -Inode_modules' \
