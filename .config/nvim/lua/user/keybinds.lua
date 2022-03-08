@@ -6,13 +6,6 @@ end
 local function nkeymap(key, map)
   keymap("n", key, map, { noremap = true })
 end
-local function xkeymapsilent(key, map)
-  keymap("x", key, map, { noremap = true })
-end
-local function vkeymapsilent(key, map)
-  keymap("v", key, map, { noremap = true })
-end
-
 -- leader key
 vim.g.mapleader = " "
 
@@ -24,6 +17,7 @@ nkeymapsilent("x", '"_x') -- not to put the cut into the register
 nkeymapsilent("dw", '"_dw')
 nkeymapsilent("ce", '"_ce')
 nkeymapsilent("cw", '"_cw')
+nkeymapsilent("<C-n>", ":noh<CR>")
 nkeymapsilent('c"', 'ci"')
 nkeymapsilent("c)", "ci)")
 nkeymapsilent("c}", "ci}")
@@ -41,9 +35,11 @@ nkeymap("<leader>K", "<cmd>lprev<CR>")
 nkeymap("<leader>pv", "<cmd>Ex<CR>")
 nkeymap("<leader>nv", "<cmd>FZF ~/.config/nvim/lua<CR>")
 nkeymap("<leader>ls", "<cmd>LspInfo<CR>")
-xkeymapsilent("p", "pgvy")
-xkeymapsilent("s*", '"sy:let @/=@s<CR>cgn')
-vkeymapsilent("y", "ygv<Esc>")
+keymap("x", "s*", '"sy:let @/=@s<CR>cgn', { noremap = true })
+keymap("x", "p", "pgvy", { noremap = true })
+keymap("v", "y", "ygv<Esc>", { noremap = true })
+keymap("c", "<C-j>", "<Down>", { noremap = true })
+keymap("c", "<C-k>", "<Up>", { noremap = true })
 
 -- window navigation
 nkeymap("<c-h>", "<c-w>h")

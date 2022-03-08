@@ -4,7 +4,6 @@ local options = {
   relativenumber = true,
   laststatus = 2,
   nu = true,
-  hlsearch = false,
   numberwidth = 1,
   expandtab = true,
   shiftwidth = 2,
@@ -26,7 +25,6 @@ for k, v in pairs(options) do
 end
 
 vim.cmd([[
-  syntax enable
   filetype plugin indent on
   colorscheme gruvbox
   highlight Normal ctermbg=none

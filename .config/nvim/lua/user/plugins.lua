@@ -1,4 +1,5 @@
 require("paq")({
+  "nelstrom/vim-visual-star-search",
   "savq/paq-nvim",
   "morhetz/gruvbox",
   "tpope/vim-fugitive",

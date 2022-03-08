@@ -9,14 +9,14 @@ cmp.setup({
     end,
   },
   mapping = {
-    ["<M-k>"] = function(fallback)
+    ["<Tab>"] = function(fallback)
       if luasnip.jumpable(1) then
         luasnip.jump(1)
       else
         fallback()
       end
     end,
-    ["<M-j>"] = function(fallback)
+    ["<S-Tab>"] = function(fallback)
       if luasnip.jumpable(-1) then
         luasnip.jump(-1)
       else
