@@ -18,7 +18,7 @@ M.on_attach = function(client, bufnr)
       autocmd! * <buffer>
       autocmd bufwritepre <buffer> lua vim.lsp.buf.formatting_sync()
     augroup end
-]])
+    ]])
   end
 end
 
