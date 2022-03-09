@@ -1,5 +1,6 @@
 require("user.plugins")
 require("user.settings")
+require("user.autocmds")
 require("user.keybinds")
 require("user.netrw")
 require("user.treesitter")

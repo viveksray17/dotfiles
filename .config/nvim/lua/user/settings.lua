@@ -25,14 +25,8 @@ for k, v in pairs(options) do
 end
 
 vim.cmd([[
-  filetype plugin indent on
   colorscheme gruvbox
   highlight Normal ctermbg=none
   hi Visual cterm=none ctermbg=darkgrey
   nnoremap <silent> s* :let @/='\<'.expand('<cword>').'\>'<CR>cgn
-  augroup general
-    autocmd!
-    autocmd BufNewFile,BufRead ~/Documents/code/python_projects/**/*.html set ft=htmldjango
-    autocmd TermOpen * setlocal nonumber norelativenumber nosmd signcolumn=no
-  augroup end
 ]])
