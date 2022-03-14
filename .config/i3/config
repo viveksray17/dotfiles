@@ -22,7 +22,7 @@ bindsym $mod+g exec --no-startup-id tmux-sessions
 bindsym $mod+x exec --no-startup-id dmenupoweroff
 bindsym $mod+s exec --no-startup-id dmenureboot
 bindsym $mod+p exec --no-startup-id passmenu
-bindsym $mod+e exec --no-startup-id pcmanfm
+bindsym $mod+e exec --no-startup-id pcmanfm; workspace $ws4
 bindsym $mod+shift+p exec --no-startup-id $TERMINAL -e "add-pass"; workspace $ws2
 bindsym $mod+b exec --no-startup-id dmenubookmarks
 bindsym $mod+shift+b exec --no-startup-id $TERMINAL -e "add-bookmark"; workspace $ws2
@@ -82,7 +82,9 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 assign [class="Firefox"] $ws1
+assign [class="vlc"] $ws5
 assign [class="st-256color"] $ws2
+assign [class="Pcmanfm"] $ws4
 assign [class="Zathura"] $ws3
 
 bindsym $mod+Shift+r restart
