@@ -35,14 +35,17 @@ nkeymap("<leader>ls", "<cmd>LspInfo<CR>")
 keymap("x", "s*", '"sy:let @/=@s<CR>cgn', { noremap = true })
 keymap("x", "p", "pgvy", { noremap = true })
 keymap("v", "y", "ygv<Esc>", { noremap = true })
+keymap("v", "<C-e>", "<C-a>", { noremap = true })
+keymap("v", "g<C-e>", "g<C-a>", { noremap = true })
 keymap("c", "<C-j>", "<Down>", { noremap = true })
 keymap("c", "<C-k>", "<Up>", { noremap = true })
 
 -- window navigation
-nkeymap("<c-h>", "<c-w>h")
-nkeymap("<c-l>", "<c-w>l")
-nkeymap("<c-j>", "<c-w>j")
-nkeymap("<c-k>", "<c-w>k")
+nkeymap("<C-h>", "<C-w>h")
+nkeymap("<C-l>", "<C-w>l")
+nkeymap("<C-j>", "<C-w>j")
+nkeymap("<C-k>", "<C-w>k")
+nkeymap("<C-e>", "<C-a>")
 
 -- vim-fugitive
 nkeymapsilent("<leader>gs", "<cmd>G<CR>") -- git status
