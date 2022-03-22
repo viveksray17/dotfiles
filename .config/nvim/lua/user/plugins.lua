@@ -1,4 +1,5 @@
 require("paq")({
+  "itchyny/vim-gitbranch",
   "nelstrom/vim-visual-star-search",
   "savq/paq-nvim",
   "morhetz/gruvbox",
