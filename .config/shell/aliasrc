@@ -6,7 +6,7 @@ alias \
   gc="git commit" \
   gcl="git clone" \
   gpm="git push origin master" \
-  gp="git push origin" \
+  gp="git push" \
   gdf="git diff" \
   gr="git remote -v" \
   gch="git checkout" \
@@ -15,7 +15,8 @@ alias \
   grv="git remote remove origin" \
   gi="git init" \
   gb="git branch" \
-  dcp="docker container prune --force"
+  dcp="docker container prune --force" \
+  pve="python3 -m venv venv"
 
 # ALIASES FOR CONFIG
 alias \
@@ -33,7 +34,7 @@ alias \
   au='sudo apt update && sudo apt upgrade' \
   ar='sudo apt purge --autoremove' \
   as='apt list | rg ' \
-  aq='apt list --installed' \
+  aq='apt list --installed | rg ' \
   nu='sudo npm update -g' \
   ls='ls -lh --color=auto -Ivenv -I__pycache__ -I__init__.py -Inode_modules' \
   ll='ls -al --color=auto' \
