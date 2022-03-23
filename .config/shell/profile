@@ -1,5 +1,5 @@
 #!/bin/bash
-export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/Applications:$PATH"
 export EDITOR="nvim"
 export TERMINAL="st"
 export HISTFILE="$HOME/.cache/.bash_history"
