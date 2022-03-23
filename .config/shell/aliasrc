@@ -16,7 +16,8 @@ alias \
   gi="git init" \
   gb="git branch" \
   dcp="docker container prune --force" \
-  pve="python3 -m venv venv"
+  pve="python3 -m venv venv" \
+  md="cd ~/Documents/GoogleDrive/md"
 
 # ALIASES FOR CONFIG
 alias \
