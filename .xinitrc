@@ -8,5 +8,6 @@ picom &
 ~/.fehbg &
 eval $(ssh-agent)
 eval $(/usr/bin/gpg-agent --daemon)
+# Mount google-drive using rclone
 $HOME/.config/x11/rclone-gdrive-mount.sh
 exec i3
