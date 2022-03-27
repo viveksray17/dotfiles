@@ -30,6 +30,8 @@ bindsym $mod+o exec --no-startup-id dmenuemail
 bindsym $mod+shift+o exec --no-startup-id $TERMINAL -e "add-email"; workspace $ws2
 bindsym $mod+w exec --no-startup-id firefox; workspace $ws1;
 bindsym $mod+F3 exec --no-startup-id sxiv -t -f $HOME/Pictures/wallpapers
+bindsym $mod+F5 exec --no-startup-id rclone-gdrive-mount.sh 
+
 bindsym --release $mod+u exec slock
 
 bindsym $mod+h focus left

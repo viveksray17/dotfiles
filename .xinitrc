@@ -1,13 +1,13 @@
 #!/bin/sh
 setxkbmap -option ctrl:nocaps
+xcape -e 'Control_L=Escape'
 xmodmap -e 'keycode 37 = '
 xmodmap -e 'keycode 108 = Caps_Lock'
-xcape -e 'Control_L=Escape'
 xrdb -merge $HOME/.Xresources
 picom &
 ~/.fehbg &
 eval $(ssh-agent)
 eval $(/usr/bin/gpg-agent --daemon)
 # Mount google-drive using rclone
-$HOME/.config/x11/rclone-gdrive-mount.sh
+rclone-gdrive-mount.sh
 exec i3
