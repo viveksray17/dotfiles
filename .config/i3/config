@@ -30,7 +30,7 @@ bindsym $mod+o exec --no-startup-id dmenuemail
 bindsym $mod+shift+o exec --no-startup-id $TERMINAL -e "add-email"; workspace $ws2
 bindsym $mod+w exec --no-startup-id firefox; workspace $ws1;
 bindsym $mod+F3 exec --no-startup-id sxiv -t -f $HOME/Pictures/wallpapers
-bindsym $mod+F5 exec --no-startup-id rclone-gdrive-mount.sh 
+bindsym $mod+F5 exec --no-startup-id $HOME/.config/x11/rclone-gdrive-mount.sh 
 
 bindsym --release $mod+u exec slock
 
@@ -71,7 +71,6 @@ bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
 
-
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3
@@ -84,7 +83,6 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 assign [class="Firefox"] $ws1
-assign [class="vlc"] $ws5
 assign [class="st-256color"] $ws2
 assign [class="Pcmanfm"] $ws5
 assign [class="Zathura"] $ws3
