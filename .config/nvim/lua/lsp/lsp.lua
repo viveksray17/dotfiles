@@ -8,3 +8,6 @@ require("lspconfig").pyright.setup({
     },
   },
 })
+require("lspconfig").gopls.setup({
+  on_attach = require("lsp.handlers").on_attach,
+})
