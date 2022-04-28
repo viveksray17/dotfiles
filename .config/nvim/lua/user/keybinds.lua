@@ -15,6 +15,7 @@ nkeymapsilent("L", "<cmd>bnext<CR>")
 nkeymapsilent("U", "<c-r>") -- redo
 nkeymapsilent("x", '"_x') -- not to put the cut into the register
 nkeymapsilent("dw", '"_dw')
+nkeymapsilent("dd", "yydd")
 nkeymapsilent("ce", '"_ce')
 nkeymapsilent("cw", '"_cw')
 nkeymapsilent("yia", ":%y+<CR>")
