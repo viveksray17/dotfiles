@@ -1,2 +1,2 @@
 #!/bin/sh
-maim ~/Documents/GoogleDrive/shots/screenshot_$(date '+%Y-%m-%d_%T').png | xclip -selection clipboard -t image/png
+maim ~/Documents/GoogleDrive/screenshots/screenshot_$(date '+%Y-%m-%d_%T').png | xclip -selection clipboard -t image/png
