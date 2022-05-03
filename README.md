@@ -1,6 +1,3 @@
-## Updates
-Neovim version I use is v0.6.1. Newer version probably won't work for you. It has some changes which I haven't yet got time to fix them
-
 ### Installation
 
 0. PREREQUISITE -> git
