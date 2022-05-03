@@ -16,7 +16,6 @@ local options = {
   signcolumn = "yes",
   completeopt = { "menu", "menuone", "noselect" },
 }
-vim.g.python3_host_prog = vim.fn.expand("~/.local/share/nvim/neovim_env/bin/python3")
 vim.g.fzf_layout = { ["down"] = "20%" }
 
 for k, v in pairs(options) do

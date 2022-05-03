@@ -1,9 +1,8 @@
 require("paq")({
+  "morhetz/gruvbox",
   "itchyny/vim-gitbranch",
   "iamcco/markdown-preview.nvim",
-  "nelstrom/vim-visual-star-search",
   "savq/paq-nvim",
-  "morhetz/gruvbox",
   "tpope/vim-fugitive",
   "numToStr/Comment.nvim",
   "nvim-treesitter/nvim-treesitter",
