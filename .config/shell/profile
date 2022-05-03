@@ -6,5 +6,5 @@ export HISTSIZE=50000
 export FZF_DEFAULT_COMMAND="rg --files --follow --no-ignore-vcs --hidden -g '!node_modules/' -g '!.git' -g '!__pycache__' -g '!venv'"
 source $HOME/.secret_env
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec startx
+  exec startx 2> /dev/null
 fi
