@@ -31,6 +31,7 @@ alias \
 alias \
   ..='cd ..' \
   ...='cd ../..' \
+  gd="cd ~/Documents/GoogleDrive" \
   ai='sudo apt install' \
   au='sudo apt update && sudo apt upgrade' \
   ar='sudo apt purge --autoremove' \

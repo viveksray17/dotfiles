@@ -6,4 +6,4 @@ picom &
 ~/.fehbg &
 eval $(ssh-agent)
 eval $(/usr/bin/gpg-agent --daemon)
-exec i3
+exec i3 > /dev/null

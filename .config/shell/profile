@@ -1,5 +1,7 @@
 #!/bin/bash
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/Applications:$PATH"
+export GOPATH="/home/vivek/go"
+export PATH="$GOPATH/bin:$PATH"
 export EDITOR="nvim"
 export TERMINAL="st"
 export HISTSIZE=50000
