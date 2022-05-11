@@ -1,7 +1,8 @@
 vim.cmd([[
   augroup general
     autocmd!
-    autocmd BufNewFile,BufRead ~/Documents/code/python_projects/**/*.html set ft=htmldjango
+    autocmd BufNewFile,BufRead *.djhtml set ft=htmldjango
+    autocmd BufNewFile,BufRead *.gohtml set ft=html
     autocmd TermOpen * setlocal nonumber norelativenumber nosmd signcolumn=no
   augroup end
 
