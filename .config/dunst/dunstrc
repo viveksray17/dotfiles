@@ -1,0 +1,10 @@
+[global]
+    offset = 5x5
+    frame_color = "#B06B9F"
+    font = Monospace 9
+
+[urgency_low]
+    timeout = 8
+
+[urgency_normal]
+    timeout = 8
