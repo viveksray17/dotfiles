@@ -1,5 +1,11 @@
 #!/bin/sh
 chosen=$(ls -l $HOME/.local/share/bookmarks | awk '{ print $9 }' | tail -n +2 | dmenu -i -p "bookmarks:")
 [ -z "$chosen" ] && exit
-url=$(cat $HOME/.local/share/bookmarks/$chosen )
-firefox $url
+
+#Copy the link if firefox is already open. If not then open firefox with that link
+if [[ $(pgrep firefox) ]]; then
+  xclip -sel clip $HOME/.local/share/bookmarks/$chosen
+else
+  url=$(cat $HOME/.local/share/bookmarks/$chosen )
+  firefox $url
+fi
