@@ -1,2 +1,3 @@
 #!/bin/sh
-maim ~/Documents/GoogleDrive/screenshots/screenshot_$(date '+%Y-%m-%d_%T').png | xclip -selection clipboard -t image/png
+notify-send "MAIM" "full screenshot started"
+maim ~/Documents/GoogleDrive/screenshots/screenshot_$(date '+%Y-%m-%d_%T').png | xclip -selection clipboard -t image/png && notify-send "MAIM" "full screenshot completed"
