@@ -1,0 +1,3 @@
+chosen=$(cat $HOME/.local/share/emojis | dmenu -i -l 10)
+emoji=$(echo $chosen | awk '{print $1}')
+echo -n $emoji | xclip -sel clip
