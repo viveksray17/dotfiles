@@ -1,11 +1,11 @@
 #!/bin/sh
 if [ $1 == "video+audio" ]; then
   notify-send "FFMPEG" "screenrecording started"
-  ffmpeg -f x11grab -video_size 1366x768 -framerate 30 -i :0.0 -f pulse -i default -c:v libx264 -profile:v baseline -level 3.0 -pix_fmt yuv420p ~/Videos/screencasts/screencast_$(date '+%Y-%m-%d_%T').mp4 > /dev/null
+  ffmpeg -f x11grab -video_size 1366x768 -framerate 30 -i :0.0 -f pulse -i default ~/Videos/screencasts/screencast_$(date '+%Y-%m-%d_%T').mp4 > /dev/null
 elif [ $1 == "kill" ]; then
   killall ffmpeg
   notify-send "FFMPEG" "screenrecording stopped"
 else
   notify-send "FFMPEG" "screenrecording started"
-  ffmpeg -f x11grab -video_size 1366x768 -framerate 30 -i :0.0 -c:v libx264 -profile:v baseline -level 3.0 -pix_fmt yuv420p ~/Videos/screencasts/screencast_$(date '+%Y-%m-%d_%T').mp4 > /dev/null
+  ffmpeg -f x11grab -video_size 1366x768 -framerate 30 -i :0.0 ~/Videos/screencasts/screencast_$(date '+%Y-%m-%d_%T').mp4 > /dev/null
 fi
