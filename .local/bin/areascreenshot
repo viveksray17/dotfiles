@@ -1,3 +1,8 @@
 #!/bin/sh
-notify-send "MAIM" "area screenshot started"
-maim --select ~/Documents/GoogleDrive/screenshots/screenshot_$(date '+%Y-%m-%d_%T').png | xclip -selection clipboard -t image/png && notify-send "MAIM" "area screenshot completed"
+DIR="$HOME/Documents/GoogleDrive/screenshots"
+if [ -d "$DIR" ]; then
+  maim --select ~/Documents/GoogleDrive/screenshots/screenshot_$(date '+%Y-%m-%d_%T').png | xclip -selection clipboard -t image/png
+  notify-send "MAIM" "area screenshot completed"
+else
+  notify-send "MAIM" "Directory not available"
+fi
