@@ -1,0 +1,25 @@
+# nvim: set filetype=neomuttrc
+set imap_user = "viveksundaray123@outlook.com"
+set smtp_user = $imap_user
+set folder = "imaps://outlook.office365.com:993"
+set smtp_url = "smtp://smtp-mail.outlook.com:587"
+set imap_pass = "`pass outlook`"
+set smtp_pass = $imap_pass
+
+# Fetching and Storing Mails
+set spool_file = "+INBOX"
+unset record
+set postponed = "+Drafts"
+set trash = "+Deleted"
+mailboxes =INBOX =Sent =Drafts =Deleted =Archive
+
+# Email Information
+set from = "viveksundaray123@outlook.com"
+set real_name = "Vivek Sundaray"
+
+# Aliases
+alias me <viveksundaray123@outlook.com>
+alias chinmaya-outlook <chinmayasamantara2007@outlook.com>
+alias chinmaya-gmail <chinmayasamantara2007@gmail.com>
+alias sraykamini <sraykamini@gmail.com>
+alias ashok <ashoksray7@gmail.com>
