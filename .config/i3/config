@@ -3,6 +3,7 @@ set $mod Mod4
 font pango:Monospace 10
 
 for_window [class="^.*"] border pixel 2
+for_window [class="st" title="neomutt"] move to workspace 4
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
@@ -34,6 +35,7 @@ bindsym $mod+F6 exec --no-startup-id screenrecord
 bindsym $mod+shift+F6 exec --no-startup-id screenrecord video+audio
 bindsym $mod+F7 exec --no-startup-id screenrecord kill
 bindsym $mod+m exec --no-startup-id dmenuemoji
+bindsym $mod+t exec --no-startup-id st -e neomutt; workspace $ws4
 
 bindsym --release $mod+u exec slock
 
