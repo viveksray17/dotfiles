@@ -1,10 +1,10 @@
 # Account
-source ./accounts/viveksundaray123.neomuttrc
+source ./accounts/$EMAIL.neomuttrc
 
 # General Settings
 set sort = reverse-date
 set sidebar_visible
-set sidebar_width = 20
+set sidebar_width = 25
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set index_format = "%4C %Z %{%b %d} %L (%?l?%4l&%4c?) %s"
 unset beep
@@ -14,6 +14,13 @@ bind index,pager \CK sidebar-prev
 bind index,pager \CJ sidebar-next
 bind index,pager \CO sidebar-open
 bind index,pager B sidebar-toggle-visible
+unbind index,pager i
 
-#Macros
+# Macros
 macro index,pager a "<save-message>=Archive<enter>" "Archive Message"
+
+# Common Aliases
+alias chinmaya-outlook <chinmayasamantara2007@outlook.com>
+alias chinmaya-gmail <chinmayasamantara2007@gmail.com>
+alias sraykamini <sraykamini@gmail.com>
+alias ashok <ashoksray7@gmail.com>

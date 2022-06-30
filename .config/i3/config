@@ -35,7 +35,7 @@ bindsym $mod+F6 exec --no-startup-id screenrecord
 bindsym $mod+shift+F6 exec --no-startup-id screenrecord video+audio
 bindsym $mod+F7 exec --no-startup-id screenrecord kill
 bindsym $mod+m exec --no-startup-id dmenuemoji
-bindsym $mod+t exec --no-startup-id st -e neomutt; workspace $ws4
+bindsym $mod+t exec --no-startup-id neomutt-prompt
 
 bindsym --release $mod+u exec slock
 
