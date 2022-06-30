@@ -1,4 +1,4 @@
-# nvim: set filetype=neomuttrc
+# vim: filetype=neomuttrc
 set imap_user = "viveksundaray123@outlook.com"
 set smtp_user = $imap_user
 set folder = "imaps://outlook.office365.com:993"
