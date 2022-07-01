@@ -16,4 +16,6 @@ mailboxes =INBOX =[Gmail]/Sent\ Mail =[Gmail]/Drafts =[Gmail]/Spam =[Gmail]/Tras
 # Email Information
 set from = "viveksray17@gmail.com"
 set real_name = "Vivek Sundaray"
+
+# Specific Aliases
 alias me <viveksundaray123@outlook.com>

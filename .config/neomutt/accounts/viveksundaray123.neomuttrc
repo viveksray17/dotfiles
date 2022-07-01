@@ -16,4 +16,6 @@ mailboxes =INBOX =Sent =Drafts =Deleted =Archive
 # Email Information
 set from = "viveksundaray123@outlook.com"
 set real_name = "Vivek Sundaray"
+
+# Specific Aliases
 alias me <viveksundaray123@outlook.com>
