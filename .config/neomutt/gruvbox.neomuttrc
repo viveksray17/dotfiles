@@ -1,0 +1,48 @@
+# vim: filetype=neomuttrc
+color attachment  color109 default
+color bold        color229 default
+color error       color167 default
+color hdrdefault  color246 color235
+color indicator   default color237
+color markers     color243 default
+color quoted      color250 default
+color quoted1     color108 default
+color quoted2     color250 default
+color quoted3     color108 default
+color quoted4     color250 default
+color quoted5     color108 default
+color search      color234 color208
+color signature   color108 default
+color status      color234 color250
+color tilde       color243 default
+color tree        color142 default
+color underline   color223 color239
+
+color sidebar_divider    color250 default
+color sidebar_new        color142 default
+color sidebar_highlight  color214 default
+
+color index color142 default "~N"
+color index color108 default "~O"
+color index color109 default "~P"
+color index color214 default "~F"
+color index color175 default "~Q"
+color index color167 default "~="
+color index color234 color223 "~T"
+color index color234 color167 "~D"
+
+color header color214 default "^(To:|From:)"
+color header color142 default "^Subject:"
+color header color108 default "^X-Spam-Status:"
+color header color108 default "^Received:"
+color body color142 default "[a-z]{3,255}://[[:graph:]]*"
+color body color142 default "([-[:alnum:]]+\\.)+([0-9]{1,3}|[-[:alpha:]]+)/[[:graph:]]*"
+color body color142 default "([-[:alnum:]]+\\.){2,255}[-[:alpha:]]{2,10}"
+
+# IPv4 and IPv6 stolen from https://stackoverflow.com/questions/53497/regular-expression-that-matches-valid-ipv6-addresses
+color body color142 default "((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])"
+color body color142 default "(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))"
+
+# Mail addresses and mailto URLs
+color body color208 default "[-a-z_0-9.%$]+@[-a-z_0-9.]+\\.[-a-z][-a-z]+"
+color body color208 default "mailto:[-a-z_0-9.]+@[-a-z_0-9.]+"

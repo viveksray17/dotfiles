@@ -11,7 +11,7 @@ set spool_file = "+INBOX"
 set postponed = "+Drafts"
 set trash = "+Deleted"
 unset record
-mailboxes =INBOX =Sent =Drafts =Deleted =Archive
+mailboxes =INBOX =Sent =Drafts =Junk =Deleted =Archive
 
 # Email Information
 set from = "viveksundaray123@outlook.com"

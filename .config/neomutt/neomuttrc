@@ -9,6 +9,10 @@ set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set index_format = "%4C %Z %{%b %d} %L (%?l?%4l&%4c?) %s"
 unset beep
 
+# Color Scheme
+# modified https://github.com/shuber2/mutt-gruvbox
+source ./gruvbox.neomuttrc
+
 # Keybinds
 bind index,pager \CK sidebar-prev
 bind index,pager \CJ sidebar-next
