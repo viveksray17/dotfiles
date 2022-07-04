@@ -7,6 +7,7 @@ set sidebar_visible
 set sidebar_width = 25
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set index_format = "%4C %Z %{%b %d} %L (%?l?%4l&%4c?) %s"
+set include # include message in reply
 unset beep
 
 # Color Scheme
@@ -17,7 +18,9 @@ source ./gruvbox.neomuttrc
 bind index,pager \CK sidebar-prev
 bind index,pager \CJ sidebar-next
 bind index,pager \CO sidebar-open
-bind index,pager B sidebar-toggle-visible
+bind index,attach g noop
+bind attach,index gg first-entry
+bind attach,index G last-entry
 
 # Macros
 macro index,pager A "<save-message>=Archive<enter>" "Archive Message"
