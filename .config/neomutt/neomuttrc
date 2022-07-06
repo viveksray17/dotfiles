@@ -7,8 +7,10 @@ set sidebar_visible
 set sidebar_width = 25
 set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
 set index_format = "%4C %Z %{%b %d} %L (%?l?%4l&%4c?) %s"
-set include # include message in reply
+set include
 unset beep
+set mailcap_path = ~/.config/neomutt/mailcap
+set message_cachedir = "~/.local/share/email-cache/$EMAIL/"
 
 # Color Scheme
 # modified https://github.com/shuber2/mutt-gruvbox
@@ -21,6 +23,10 @@ bind index,pager \CO sidebar-open
 bind index,attach g noop
 bind attach,index gg first-entry
 bind attach,index G last-entry
+bind pager - noop
+bind pager <Space> noop
+bind pager j next-page
+bind pager k previous-page
 
 # Macros
 macro index,pager A "<save-message>=Archive<enter>" "Archive Message"
