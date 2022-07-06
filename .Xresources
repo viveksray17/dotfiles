@@ -1,7 +1,7 @@
 ! COLORS FOR SXIV
 Sxiv.foreground:   #bbc2cf
-Sxiv.background:   #1a1c1e
-Sxiv.font: Ubuntu:style=bold:size=10
+Sxiv.background:   #1d2021
+Sxiv.font: Sans:style=bold:size=10
 
 Xft.dpi: 96
 Xft.antialias: 1
