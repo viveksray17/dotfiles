@@ -3,7 +3,7 @@ set imap_user = "viveksundaray123@outlook.com"
 set smtp_user = $imap_user
 set folder = "imaps://outlook.office365.com:993"
 set smtp_url = "smtp://smtp-mail.outlook.com:587"
-set imap_pass = "`pass outlook`"
+set imap_pass = "`pass viveksundaray123-outlook`"
 set smtp_pass = $imap_pass
 
 # Fetching and Storing Mails

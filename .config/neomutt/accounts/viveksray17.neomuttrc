@@ -3,7 +3,7 @@ set imap_user = "viveksray17@gmail.com"
 set smtp_user = $imap_user
 set folder = "imaps://imap.gmail.com:993/"
 set smtp_url = "smtps://smtp.gmail.com:465/"
-set imap_pass = "`pass neomutt-viveksray17-password`"
+set imap_pass = "`pass neomutt-viveksray17-gmail`"
 set smtp_pass = $imap_pass
 
 # Fetching and Storing Mails
