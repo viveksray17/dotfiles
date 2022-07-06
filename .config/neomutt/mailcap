@@ -3,3 +3,8 @@ image/png; sxiv %s;
 image/jpeg; sxiv %s;
 application/octet-stream; sxiv %s;
 application/pdf; zathura %s;
+video/mp4; mpv %s;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice --view %s;
+application/vnd.oasis.opendocument.text; libreoffice --view %s;
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; libreoffice --view %s;
+application/vnd.oasis.opendocument.spreadsheet; libreoffice --view %s;
