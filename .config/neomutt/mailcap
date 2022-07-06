@@ -1,0 +1,5 @@
+text/html; firefox %s 2> /dev/null;
+image/png; sxiv %s;
+image/jpeg; sxiv %s;
+application/octet-stream; sxiv %s;
+application/pdf; zathura %s;
