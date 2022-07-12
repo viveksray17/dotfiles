@@ -11,8 +11,24 @@ cmd open ${{
     esac
 }}
 
+# Un-Archive files
+cmd unarchive ${{
+  case "$f" in
+    *.zip) unzip "$f" ;;
+    *.tar.gz) tar -xzvf "$f" ;;
+    *.tar.bz2) tar -xjvf "$f" ;;
+    *.tar) tar -xvf "$f" ;;
+    *) echo "Unsupported format" ;;
+  esac
+}}
+
+# Archive files
+cmd zip %zip -r "$f" "$f"
+cmd tar %tar cvf "$f.tar" "$f"
+
 # Remove some keybindings
 map m
+map d
 
 # Some useful commands
 cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
@@ -29,7 +45,7 @@ cmd opentmux ${{
 }}
 
 cmd copyfilepath ${{
-  echo -n $fx | xclip -sel clip
+  echo -n $fx | sed -r -e "s/\s/\\\ /g" | xclip -sel clip
 }}
 
 # FZF Integration
@@ -59,7 +75,7 @@ map gc cd ~/Documents/code/
 map mf push :mkfile<space>
 map md push :mkdir<space>
 map r push :rename<space>
-map d :delete
+map D :delete
 map c :cut
 map C :clear
 map <enter> open
@@ -67,3 +83,6 @@ map <c-t> openterminal
 map . :set hidden!
 map T opentmux
 map P copyfilepath
+map az zip
+map at tar
+map au unarchive

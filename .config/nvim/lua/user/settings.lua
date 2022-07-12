@@ -3,6 +3,7 @@ local options = {
   wrap = false,
   relativenumber = true,
   numberwidth = 1,
+  showtabline = 2,
   nu = true,
   expandtab = true,
   shiftwidth = 2,
