@@ -6,6 +6,6 @@ chosen=$(ls -l $HOME/.local/share/bookmarks | awk '{ print $9 }' | tail -n +2 | 
 if [[ $(pgrep firefox) ]]; then
   xclip -sel clip $HOME/.local/share/bookmarks/$chosen
 else
-  url=$(cat $HOME/.local/share/bookmarks/$chosen )
+  url=$(cat $HOME/.local/share/bookmarks/$chosen)
   firefox $url
 fi
