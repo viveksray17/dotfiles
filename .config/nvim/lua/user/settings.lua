@@ -17,6 +17,7 @@ local options = {
   completeopt = { "menu", "menuone", "noselect" },
 }
 vim.g.fzf_layout = { ["down"] = "20%" }
+vim.g.fzf_action = { ["enter"] = "tab split" }
 
 for k, v in pairs(options) do
   vim.opt[k] = v

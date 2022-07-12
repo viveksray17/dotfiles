@@ -10,8 +10,8 @@ end
 vim.g.mapleader = " "
 
 -- general keybinds
-nkeymapsilent("H", "<cmd>bprev<CR>")
-nkeymapsilent("L", "<cmd>bnext<CR>")
+nkeymapsilent("<C-h>", "<cmd>tabprevious<CR>")
+nkeymapsilent("<C-l>", "<cmd>tabnext<CR>")
 nkeymapsilent("U", "<c-r>") -- redo
 nkeymapsilent("x", '"_x') -- not to put the cut into the register
 nkeymapsilent("dw", '"_dw')
@@ -20,10 +20,10 @@ nkeymapsilent("ce", '"_ce')
 nkeymapsilent("cw", '"_cw')
 nkeymapsilent("yia", ":%y+<CR>")
 nkeymapsilent("<C-n>", ":noh<CR>")
-nkeymapsilent("<leader>d", "<cmd>bdelete!<CR>")
+nkeymapsilent("<S-d>", "<cmd>bdelete!<CR>")
 nkeymapsilent("<C-p>", "<cmd>FZF<CR>")
 nkeymap("<leader>r", ":Rg ")
-nkeymap("<leader>e", ":edit ")
+nkeymap("<leader>e", ":tabedit ")
 nkeymap("<leader>E", ":!mkdir ")
 nkeymap("sr", ":%s///g<Left><Left>")
 nkeymap("<leader>s", ":so %<CR>")
@@ -40,12 +40,6 @@ keymap("c", "<C-j>", "<Down>", { noremap = true })
 keymap("c", "<C-k>", "<Up>", { noremap = true })
 keymap("c", "<C-h>", "<Left>", { noremap = true })
 keymap("c", "<C-l>", "<Right>", { noremap = true })
-
--- window navigation
-nkeymap("<C-h>", "<C-w>h")
-nkeymap("<C-l>", "<C-w>l")
-nkeymap("<C-j>", "<C-w>j")
-nkeymap("<C-k>", "<C-w>k")
 nkeymap("<C-e>", "<C-a>")
 
 -- vim-fugitive
