@@ -4,4 +4,3 @@ PS1+='\[\033[38;5;63m\]$(if git rev-parse --git-dir > /dev/null 2>&1; then echo 
 PS1+='\[\033[00m\]\$ '
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
