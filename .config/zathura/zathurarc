@@ -9,3 +9,5 @@ map R rotate
 set scroll-step 70
 set page-padding 1
 map i recolor
+unmap +
+unmap -
