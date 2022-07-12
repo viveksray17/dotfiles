@@ -1,17 +1,15 @@
 # vim: filetype=neomuttrc
-set imap_user = "viveksray17@gmail.com" 
-set smtp_user = $imap_user
-set folder = "imaps://imap.gmail.com:993/"
+set smtp_user = "viveksray17@gmail.com"
+set folder = "~/.local/share/mails/viveksray17"
 set smtp_url = "smtps://smtp.gmail.com:465/"
-set imap_pass = "`pass neomutt-viveksray17-gmail`"
-set smtp_pass = $imap_pass
+set smtp_pass = "`pass neomutt-viveksray17-gmail`"
 
 # Fetching and Storing Mails
-set spool_file = "+INBOX"
+set spool_file = "+Inbox"
 set postponed = "+[Gmail]/Drafts"
 set trash = "+[Gmail]/Trash"
 unset record
-mailboxes =INBOX =[Gmail]/Sent\ Mail =[Gmail]/Drafts =[Gmail]/Spam =[Gmail]/Trash
+mailboxes =Inbox =[Gmail]/Sent\ Mail =[Gmail]/Drafts =[Gmail]/Spam =[Gmail]/Trash
 
 # Email Information
 set from = "viveksray17@gmail.com"

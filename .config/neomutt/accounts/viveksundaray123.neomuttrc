@@ -1,17 +1,15 @@
 # vim: filetype=neomuttrc
-set imap_user = "viveksundaray123@outlook.com"
-set smtp_user = $imap_user
-set folder = "imaps://outlook.office365.com:993"
+set smtp_user = "viveksundaray123@outlook.com"
+set folder = "~/.local/share/mails/viveksundaray123"
 set smtp_url = "smtp://smtp-mail.outlook.com:587"
-set imap_pass = "`pass viveksundaray123-outlook`"
-set smtp_pass = $imap_pass
+set smtp_pass = "`pass viveksundaray123-outlook`"
 
 # Fetching and Storing Mails
-set spool_file = "+INBOX"
+set spool_file = "+Inbox"
 set postponed = "+Drafts"
 set trash = "+Deleted"
 unset record
-mailboxes =INBOX =Sent =Drafts =Junk =Deleted =Archive
+mailboxes =Inbox =Archive =Sent =Drafts =Junk =Deleted
 
 # Email Information
 set from = "viveksundaray123@outlook.com"
@@ -19,3 +17,6 @@ set real_name = "Vivek Sundaray"
 
 # Specific Aliases
 alias me <viveksundaray123@outlook.com>
+
+# Macros
+macro index,pager A "<save-message>=Archive<enter>" "Archive Message"
