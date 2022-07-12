@@ -1,0 +1,69 @@
+# vim: filetype=conf
+set preview true
+set shell bash
+set previewer ~/.config/lf/previewer.sh
+cmd open ${{
+    case $(file --mime-type "$f" -bL) in
+        text/* | application/json) $EDITOR "$f";;
+        inode/x-empty) $EDITOR "$f";;
+        image/* ) sxiv "$f" &;;
+        *) xdg-open "$f" >& /dev/null & ;;
+    esac
+}}
+
+# Remove some keybindings
+map m
+
+# Some useful commands
+cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
+cmd mkdir %[ -e $1 ] && printf "folder exists" || mkdir $1
+cmd mkfile %[ -e $1 ] && printf "file exists" || touch $1
+
+# Open terminal in the directory
+cmd openterminal ${{
+  $TERMINAL &
+}}
+
+cmd opentmux ${{
+  tmux -f ~/.config/tmux.conf new -s $(basename $PWD)
+}}
+
+cmd copyfilepath ${{
+  echo -n $fx | xclip -sel clip
+}}
+
+# FZF Integration
+cmd fzf_jump ${{
+    res="$(find . -maxdepth 2 | fzf --reverse --header='Jump to location' | sed 's/\\/\\\\/g;s/"/\\"/g')"
+    if [ -d "$res" ] ; then
+        cmd="cd"
+    elif [ -f "$res" ] ; then
+        cmd="select"
+    else
+        exit 0
+    fi
+    lf -remote "send $id $cmd \"$res\""
+}}
+map <c-f> :fzf_jump
+
+# Shortcut directory
+map gf cd ~/Downloads/Fiitjee/
+map gd cd ~/Downloads/
+map gm cd ~/Music/
+map gs cd ~/Documents/GoogleDrive/screenshots/
+map gD cd ~/Documents/GoogleDrive
+map gS cd ~/Videos/screencasts/
+map gc cd ~/Documents/code/
+
+# Custom Mappings
+map mf push :mkfile<space>
+map md push :mkdir<space>
+map r push :rename<space>
+map d :delete
+map c :cut
+map C :clear
+map <enter> open
+map <c-t> openterminal
+map . :set hidden!
+map T opentmux
+map P copyfilepath
