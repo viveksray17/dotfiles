@@ -19,9 +19,9 @@ for ((i = 0; i < ${#EMAILS[@]}; i++)); do
   esac
 done
 
-touch $HOME/.local/share/emails/$service_name
+touch $HOME/.local/share/service-emails/$service_name
 echo "$email" > $HOME/.local/share/emails/$service_name
-pushd $HOME/.local/share/emails > /dev/null
+pushd $HOME/.local/share/service-emails > /dev/null
 git add -A
 git commit -m "Added service $service_name"
 git push origin master
