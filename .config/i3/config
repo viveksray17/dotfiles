@@ -36,6 +36,8 @@ bindsym $mod+shift+F6 exec --no-startup-id screenrecord video+audio
 bindsym $mod+F7 exec --no-startup-id screenrecord kill
 bindsym $mod+m exec --no-startup-id dmenuemoji
 bindsym $mod+t exec --no-startup-id neomutt-prompt
+bindsym $mod+i exec --no-startup-id mbsync-network
+bindsym $mod+c exec --no-startup-id notify-send "Calendar" "$(cal)" -t 0
 
 bindsym --release $mod+u exec slock
 
