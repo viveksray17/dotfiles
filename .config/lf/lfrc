@@ -28,7 +28,6 @@ cmd tar %tar cvf "$f.tar" "$f"
 
 # Remove some keybindings
 map m
-map d
 
 # Some useful commands
 cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
@@ -37,7 +36,7 @@ cmd mkfile %[ -e $1 ] && printf "file exists" || touch $1
 
 # Open terminal in the directory
 cmd openterminal ${{
-  $TERMINAL &
+  $TERMINAL 2> /dev/null &
 }}
 
 cmd opentmux ${{
@@ -75,7 +74,7 @@ map gc cd ~/Documents/code/
 map mf push :mkfile<space>
 map md push :mkdir<space>
 map r push :rename<space>
-map D :delete
+map d :delete
 map c :cut
 map C :clear
 map <enter> open
