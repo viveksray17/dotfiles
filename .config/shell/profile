@@ -1,0 +1,13 @@
+#!/bin/bash
+export PATH="$HOME/.local/bin:$HOME/.local/bin/user:$HOME/.cargo/bin:$HOME/Applications:$PATH"
+export GOPATH="/home/vivek/go"
+export PATH="$GOPATH/bin:$PATH"
+export EDITOR="nvim"
+export TERMINAL="xfce4-terminal"
+export BROWSER="firefox"
+export HISTSIZE=50000
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export FZF_DEFAULT_COMMAND="fd --type f --strip-cwd-prefix --hidden --follow --exclude .git"
+export FZF_DEFAULT_OPTS="--layout=reverse"
+$HOME/.config/x11/device-setup.sh &
+$HOME/.config/x11/rclone-gdrive-mount.sh &

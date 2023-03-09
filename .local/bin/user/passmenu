@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+DIR="$HOME/.password-store"
+selected=$(ls $DIR | dmenu)
+gpg -d $DIR/$selected | xargs echo -n | xclip -sel clip

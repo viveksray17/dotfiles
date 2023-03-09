@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+EMAIL1="viveksundaray123@outlook.com"
+EMAIL2="sraykamini@gmail.com"
+
+if [[ $1 = "add" ]]; then
+	read -p "enter password title: " password_title
+	read -p "do you want to generate password(y/n[edit]): " generate_password_or_not
+	if [[ $generate_password_or_not = "y" ]]; then
+		generated_password=$(password-gen.py)
+	else
+		read -p "enter password: " generated_password
+	fi
+
+	# create the encrypted password file
+	echo $generated_password > $HOME/.password-store/$password_title
+	gpg --encrypt --trust-mode always -r $EMAIL1 -r $EMAIL2 $HOME/.password-store/$password_title
+	rm $HOME/.password-store/$password_title
+
+	# push to github
+	pushd $HOME/.password-store > /dev/null
+	git add -A
+	git commit -m "added password for $password_title"
+	git push origin master
+	popd > /dev/null
+else
+	echo "enter argument"
+fi

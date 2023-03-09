@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+directory=$(find $HOME/Documents/code -maxdepth 2 -mindepth 1 | fzf)
+[ "$directory" ] && cd $directory

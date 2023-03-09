@@ -1,0 +1,11 @@
+[user]
+	name = Vivek Sundaray
+	email = viveksundaray123@outlook.com
+	signingkey = viveksundaray123@outlook.com
+[core]
+	editor = nvim
+	autocrlf = input
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true

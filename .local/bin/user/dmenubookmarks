@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+chosen=$(ls -l $HOME/.local/share/bookmarks | awk '{ print $9 }' | tail -n +2 | dmenu -i -p "bookmarks:")
+[ -z "$chosen" ] && exit
+if [[ $chosen = "whatsapp" ]]; then
+	if [[ $(firefox -v) ]]; then
+		firefox -P Whatsapp web.whatsapp.com
+	fi
+#Copy the link if $BROWSER is already open. If not then open $BROWSER with that link
+elif [[ $(pgrep $BROWSER) ]]; then
+	xclip -sel clip $HOME/.local/share/bookmarks/$chosen
+else
+	url=$(cat $HOME/.local/share/bookmarks/$chosen)
+	window_type=$(echo -e "normal\nprivate" | dmenu -p "window-type")
+	[ -z "$window_type" ] && exit
+	if [[ $window_type = "normal" ]]; then
+		$BROWSER $url
+	elif [[ $window_type = "private" ]]; then
+		$BROWSER --private-window $url
+	fi
+fi

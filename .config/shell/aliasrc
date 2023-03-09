@@ -1,0 +1,85 @@
+#!/bin/sh
+# ALIASES FOR GIT
+alias \
+	gs="git status" \
+	ga="git add" \
+	gc="git commit" \
+	gcl="git clone" \
+	gpm="git push origin master" \
+	gp="git push" \
+	gdf="git diff" \
+	gr="git remote -v" \
+	gch="git checkout" \
+	gl="git log -p" \
+	gra="git remote add origin" \
+	grv="git remote remove origin" \
+	gi="git init" \
+	gb="git branch" \
+	dcp="docker container prune --force" \
+	pve="python3 -m venv venv" \
+	md="cd ~/Documents/GoogleDrive/md" \
+	lua="luajit" \
+	tssetup="cp $HOME/.config/tsconfig.json . && mkdir src" \
+	psql="psql.sh" \
+	python="python3"
+
+# ALIASES FOR CONFIG
+alias \
+	cs="config status" \
+	ca="config add" \
+	cc="config commit" \
+	cps="config push origin master" \
+	cdf="config diff"
+
+# EXTRA
+alias \
+	..="cd .." \
+	...="cd ../.." \
+	gd="cd ~/Documents/GoogleDrive" \
+	ai="sudo apt install" \
+	au="sudo apt update && sudo apt upgrade" \
+	ar="sudo apt purge --autoremove" \
+	as="apt list | rg " \
+	aq="apt list --installed | rg " \
+	nu="sudo npm update -g" \
+	ls="ls -lh --color=auto -Ivenv -I__pycache__ -I__init__.py -Inode_modules" \
+	ll="ls -al --color=auto" \
+	sc="cd ~/.local/bin/user" \
+	config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME" \
+	rm="rm -rf" \
+	tmux="tmux -f $HOME/.config/tmux.conf" \
+	ta="tmux a" \
+	code="cd $HOME/Documents/code" \
+	mkdir="mkdir -p"
+
+se(){ 
+	file=$(find $HOME/.local/bin $HOME/.config -maxdepth 2 | grep -v "libreoffice\|VirtualBox" | fzf)
+	[ "$file" ] && nvim $file
+}
+sf(){
+	directory=$(find $HOME/.local/bin $HOME/.config -maxdepth 2 | grep -v "libreoffice\|VirtualBox" | fzf)
+	[ "$directory" ] && cd $directory
+}
+gprev(){
+	git checkout $1
+	git branch -D master
+	git switch -c master
+}
+
+drd(){
+	docker rmi $(docker images -qa -f "dangling=true")
+}
+
+copy(){
+	$1 | xclip -sel clip
+}
+
+findfile(){
+	sudo find / -iname $1 2> /dev/null
+}
+
+vac(){
+	if [[ -d 'venv' ]]; then
+		source venv/bin/activate
+	fi
+}

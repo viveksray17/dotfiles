@@ -1,0 +1,1 @@
+/home/vivek/.config/shell/profile

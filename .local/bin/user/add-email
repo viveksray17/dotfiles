@@ -1,0 +1,15 @@
+#!/bin/bash
+# Take the Input
+read -p "enter service name: " service_name
+read -p "enter login email/username: " credential
+
+# File Creation
+touch $HOME/.local/share/service-emails/$service_name
+echo "$credential" > $HOME/.local/share/service-emails/$service_name
+pushd $HOME/.local/share/service-emails > /dev/null
+
+# Commit to Git
+git add -A
+git commit -m "Added service $service_name"
+git push origin master
+popd > /dev/null

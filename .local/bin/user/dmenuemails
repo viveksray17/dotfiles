@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+chosen=$(ls -l $HOME/.local/share/service-emails | awk '{ print $9 }' | tail -n +2 | dmenu -i -p "emails:")
+[ -z "$chosen" ] && exit
+xclip -sel clip $HOME/.local/share/service-emails/$chosen
