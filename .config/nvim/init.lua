@@ -121,7 +121,6 @@ null_ls.setup({
 -- General Settings
 o.relativenumber = true
 o.number = true
--- o.guicursor = ""
 o.signcolumn = "yes"
 o.mouse = ""
 o.smartcase = true
