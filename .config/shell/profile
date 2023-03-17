@@ -1,7 +1,5 @@
 #!/bin/bash
 export PATH="$HOME/.local/bin:$HOME/.local/bin/user:$HOME/.cargo/bin:$HOME/Applications:$PATH"
-export GOPATH="/home/vivek/go"
-export PATH="$GOPATH/bin:$PATH"
 export EDITOR="nvim"
 export TERMINAL="xfce4-terminal"
 export BROWSER="firefox"

@@ -1,13 +1,5 @@
 [Configuration]
-ColorForeground=#b7b7b7
-ColorBackground=#131926
-ColorCursor=#0f4999
-ColorSelection=#163b59
-ColorSelectionUseDefault=FALSE
-ColorBold=#ffffff
-ColorBoldUseDefault=FALSE
-ColorPalette=#000000;#aa0000;#44aa44;#aa5500;#0039aa;#aa22aa;#1a92aa;#aaaaaa;#777777;#ff8787;#4ce64c;#ded82c;#295fcc;#cc58cc;#4ccce6;#ffffff
-FontName=Fira Code 11
+FontName=Monospace 11
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
@@ -16,7 +8,7 @@ MiscCursorBlinks=FALSE
 MiscCursorShape=TERMINAL_CURSOR_SHAPE_BLOCK
 MiscDefaultGeometry=80x24
 MiscInheritGeometry=FALSE
-MiscMenubarDefault=FALSE
+MiscMenubarDefault=TRUE
 MiscMouseAutohide=FALSE
 MiscMouseWheelZoom=TRUE
 MiscToolbarDefault=FALSE
@@ -34,10 +26,7 @@ MiscUseShiftArrowsToScroll=FALSE
 MiscSlimTabs=FALSE
 MiscNewTabAdjacent=FALSE
 MiscSearchDialogOpacity=100
-MiscShowUnsafePasteDialog=FALSE
-TabActivityColor=#0f4999
-TextBlinkMode=TERMINAL_TEXT_BLINK_MODE_NEVER
-BackgroundDarkness=0.860000
-TitleMode=TERMINAL_TITLE_HIDE
-ScrollingBar=TERMINAL_SCROLLBAR_NONE
+MiscShowUnsafePasteDialog=TRUE
+ColorForeground=#c0c0bfbfbcbc
+ColorBackground=#131319192626
 
