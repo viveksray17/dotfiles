@@ -6,6 +6,7 @@ font pango:monospace 10
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
+exec --no-startup-id nitrogen --restore
 set $refresh_i3status killall -SIGUSR1 i3status
 
 # audio controls
@@ -18,7 +19,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # shortcuts
-bindsym $mod+Return exec xfce4-terminal; workspace $ws2
+bindsym $mod+Return exec $TERMINAL; workspace $ws2
 bindsym $mod+q kill
 bindsym $mod+d exec --no-startup-id dmenu_run -p "Run:" -i
 bindsym $mod+w exec --no-startup-id firefox; workspace $ws1
@@ -26,6 +27,8 @@ bindsym $mod+i exec --no-startup-id geary; workspace $ws4
 bindsym $mod+b exec --no-startup-id dmenubookmarks
 bindsym $mod+p exec --no-startup-id passmenu
 bindsym $mod+e exec --no-startup-id thunar
+bindsym $mod+s exec --no-startup-id xfce4-screenshooter
+bindsym $mod+n exec --no-startup-id $TERMINAL -e nmtui-connect; workspace $ws2
 
 # move specific windows to certain workspaces
 for_window [class="Geary"] move to workspace $ws4
