@@ -25,15 +25,19 @@ bindsym $mod+d exec --no-startup-id dmenu_run -p "Run:" -i
 bindsym $mod+w exec --no-startup-id firefox; workspace $ws1
 bindsym $mod+i exec --no-startup-id geary; workspace $ws4
 bindsym $mod+b exec --no-startup-id dmenubookmarks
+bindsym $mod+o exec --no-startup-id dmenuemails
 bindsym $mod+p exec --no-startup-id passmenu
 bindsym $mod+e exec --no-startup-id thunar
 bindsym $mod+s exec --no-startup-id xfce4-screenshooter
 bindsym $mod+n exec --no-startup-id $TERMINAL -e nmtui-connect; workspace $ws2
+bindsym $mod+u exec "i3lock -c 000000"
+bindsym $mod+g exec galculator
 
-# move specific windows to certain workspaces
+# rules for some windows
 for_window [class="Geary"] move to workspace $ws4
 for_window [class="firefox"] move to workspace $ws1
 for_window [class="Xfce4-terminal"] move to workspace $ws2
+for_window [class="Galculator" instance="galculator"] floating enable
 
 # change focus
 bindsym $mod+h focus left
